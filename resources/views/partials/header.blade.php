@@ -802,7 +802,7 @@
                                         <li><a class="dropdown-item" href="register.html"><i
                                                     class="ti ti-user-plus fs-18 me-2 op-7"></i>Add Another
                                                 Account</a></li>
-                                        <li><a class="dropdown-item" href="{{ route('admin.logout') }}"><i
+                                        <li><a class="dropdown-item" href="@auth('admin') {{ route('admin.logout') }} @elseif(auth('doctor')) {{ route('doctor.logout') }} @elseif(auth('accountant')) {{ route('accountant.logout') }} @endif"><i
                                                     class="ti ti-power fs-18 me-2 op-7"></i>Sign Out</a></li>
                                         <li>
                                             <hr class="dropdown-divider my-0">
