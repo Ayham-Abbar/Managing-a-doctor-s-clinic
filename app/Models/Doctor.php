@@ -20,7 +20,7 @@ class Doctor extends Authenticatable
         'phone',
         'address',
         'image',
-        'age',
+        'date_of_birth',
         'gender',
         'experience',
         'status',
@@ -31,6 +31,7 @@ class Doctor extends Authenticatable
         'facebook',
         'linkedin',
         'username',
+       
 
 
 
