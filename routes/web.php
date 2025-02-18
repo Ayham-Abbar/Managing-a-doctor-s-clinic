@@ -35,3 +35,4 @@ require __DIR__.'/role/accountants/auth.php';
 require __DIR__.'/role/doctors/auth.php';
 require __DIR__.'/role/doctors/doctor.php';
 require __DIR__.'/role/admins/dashboard.php';
+require __DIR__.'/role/accountants/accountant.php';
