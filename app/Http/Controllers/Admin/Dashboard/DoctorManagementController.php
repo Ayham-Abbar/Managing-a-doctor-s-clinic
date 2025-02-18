@@ -35,7 +35,7 @@ class DoctorManagementController extends Controller
             'status' => 'nullable',
             'description' => 'nullable',
         ]);
-        $image = $this->uploadImage($request, 'image', 'doctors');
+        $image = $this->uploadImage($request, 'image', 'images/doctors');
         $doctor = Doctor::create([
             'name' => $request->first_name . ' ' . $request->last_name,
             'email' => $request->email,
@@ -51,7 +51,7 @@ class DoctorManagementController extends Controller
         ]);
         return redirect()->route('doctor.index')->with('success', 'Doctor created successfully');
     }
-    
+
     public function edit($id)
     {
         $doctor = Doctor::find($id);
