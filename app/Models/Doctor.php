@@ -17,4 +17,9 @@ class Doctor extends Authenticatable
     ];
 
     protected $guard = 'doctor';
+
+    public function availableTimes()
+    {
+        return $this->hasMany(AvailableTime::class);
+    }
 }
