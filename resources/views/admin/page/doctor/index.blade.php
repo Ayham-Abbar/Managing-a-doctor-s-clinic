@@ -52,8 +52,9 @@
                                             <td class="text-{{ $doctor->status == 'active' ? 'success' : 'danger' }}">
                                                 {{ $doctor->status }}</td>
                                             <td>
-                                                <a href="{{ route('doctors.edit', $doctor->id) }}" class="btn btn-primary">Edit</a>
-                                                <a href="{{ route('doctors.destroy', $doctor->id) }}" class="btn btn-danger">Delete</a>
+                                                <button class="btn btn-primary" data-bs-toggle="modal"
+                                                    data-bs-target="#editDoctorModal">Edit</button>
+                                                <a href="#" class="btn btn-danger">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -64,6 +65,137 @@
                                 @endif
                             </tbody>
                         </table>
+
+                        <!-- Edit Doctor Modal -->
+                        <div class="modal fade" id="editDoctorModal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog modal-xl" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Edit Doctor</h5>
+                                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="editDoctorForm">
+                                            <input type="hidden" id="doctor_id">
+
+                                            <div class="row">
+                                                <!-- First Name -->
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label class="form-label">First Name <span
+                                                                class="text-red">*</span></label>
+                                                        <input type="text" class="form-control" id="first_name"
+                                                            name="first_name" placeholder="Doctor's First Name">
+                                                    </div>
+                                                </div>
+                                                <!-- Last Name -->
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Last Name <span
+                                                                class="text-red">*</span></label>
+                                                        <input type="text" class="form-control" id="last_name"
+                                                            name="last_name" placeholder="Doctor's Last Name">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Email -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Email <span
+                                                                class="text-red">*</span></label>
+                                                        <input type="email" class="form-control" id="email"
+                                                            name="email" placeholder="Email">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Phone -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Phone Number</label>
+                                                        <input type="text" class="form-control" id="phone"
+                                                            name="phone" placeholder="Phone Number">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Address -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Address</label>
+                                                        <input type="text" class="form-control" id="address"
+                                                            name="address" placeholder="Address">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Profile Picture -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Profile Picture</label>
+                                                        <input type="file" class="form-control" id="image"
+                                                            name="image">
+                                                        <img id="currentImage" src="" alt="Doctor Image"
+                                                            class="mt-2" style="max-width: 150px; display: none;">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Gender -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Gender</label>
+                                                        <select class="form-control" id="gender" name="gender">
+                                                            <option value="">Select Gender</option>
+                                                            <option value="male">Male</option>
+                                                            <option value="female">Female</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Date of Birth -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Date of Birth</label>
+                                                        <input type="date" class="form-control" id="date_of_birth"
+                                                            name="date_of_birth">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Experience -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Years of Experience</label>
+                                                        <input type="number" class="form-control" id="experience"
+                                                            name="experience" placeholder="Years of Experience">
+                                                    </div>
+                                                </div>
+
+                                                <!-- Status -->
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Status</label>
+                                                        <select class="form-control" id="status" name="status">
+                                                            <option value="active">Active</option>
+                                                            <option value="inactive">Inactive</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Description -->
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Description</label>
+                                                        <textarea class="form-control" id="description" name="description" rows="3"
+                                                            placeholder="Brief description about the doctor"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="submit" class="btn btn-primary">Update Doctor</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
