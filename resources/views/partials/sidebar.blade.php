@@ -67,6 +67,9 @@
                          <li class="slide">
                              <a href="{{ route('doctor.index') }}" class="side-menu__item">Doctors List</a>
                          </li>
+                         <li class="slide">
+                             <a href="{{ route('profile') }}" class="side-menu__item">Profile</a>
+                         </li>
                          <li class="slide has-sub">
                              <a href="javascript:void(0);" class="side-menu__item">Extension
                                  <i class="fe fe-chevron-right side-menu__angle"></i></a>

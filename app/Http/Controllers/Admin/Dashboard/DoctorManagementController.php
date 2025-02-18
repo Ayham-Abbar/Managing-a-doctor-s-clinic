@@ -28,4 +28,8 @@ class DoctorManagementController extends Controller
         $doctor->delete();
         return redirect()->route('doctors.index')->with('success', 'Doctor deleted successfully');
     }
+    public function profile()
+    {
+        return view('admin.page.profile');
+    }
 }
