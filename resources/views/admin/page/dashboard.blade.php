@@ -2,6 +2,10 @@
 
 @section('title', 'Admin')
 
+@section('sidebar')
+    @include('partials.sidebar')
+@endsection
+
 @section('content')
 <!-- CONTAINER -->
 <div class="main-container container-fluid">
@@ -20,7 +24,7 @@
                                               <p class="mb-0">Total Orders</p>
                                               <span class="fs-5">45</span>
                                               <span class="fs-12 text-success ms-1"><i
-                                                      class="ti ti-trending-up mx-1"></i>0.5%</span>
+                                                      class="mx-1 ti ti-trending-up"></i>0.5%</span>
                                           </div>
                                           <div class="min-w-fit-content ms-3">
                                               <span
@@ -40,7 +44,7 @@
                                               <p class="mb-0">Total Package</p>
                                               <span class="fs-5">10</span>
                                               <span class="fs-12 text-secondary ms-1"><i
-                                                      class="ti ti-trending-down mx-1"></i>8.0%</span>
+                                                      class="mx-1 ti ti-trending-down"></i>8.0%</span>
                                           </div>
                                           <div class="min-w-fit-content ms-3">
                                               <span
@@ -60,7 +64,7 @@
                                               <p class="mb-0">Total Payments</p>
                                               <span class="fs-5">60</span>
                                               <span class="fs-12 text-success ms-1"><i
-                                                      class="ti ti-trending-up mx-1"></i>3.5%</span>
+                                                      class="mx-1 ti ti-trending-up"></i>3.5%</span>
                                           </div>
                                           <div class="min-w-fit-content ms-3">
                                               <span
@@ -75,12 +79,12 @@
                           <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-xxl-6">
                               <div class="card">
                                   <div class="card-body">
-                                      <div class="d-flex align-items-start flex-wrap gap-1">
+                                      <div class="flex-wrap gap-1 d-flex align-items-start">
                                           <div class="flex-grow-1">
                                               <p class="mb-0">Subscriptions </p>
                                               <span class="fs-5">10</span>
                                               <span class="fs-12 text-success ms-1"><i
-                                                      class="ti ti-trending-up mx-1"></i>0.5%</span>
+                                                      class="mx-1 ti ti-trending-up"></i>0.5%</span>
                                           </div>
                                           <div class="min-w-fit-content">
                                               <span class="avatar avatar-md br-5 bg-info-transparent">
@@ -94,7 +98,7 @@
                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
                               <div class="card">
                                   <div class="card-body">
-                                      <div class="d-flex align-items-center mb-3 flex-wrap gap-1">
+                                      <div class="flex-wrap gap-1 mb-3 d-flex align-items-center">
                                           <span
                                               class="avatar avatar-md stat-avatar rounded-circle text-bg-warning fs-18 min-w-fit-content me-2">
                                               <i class="bi bi-bag-check"></i>
@@ -104,8 +108,8 @@
                                       </div>
                                       <span class="fs-5">$12,897</span>
                                       <span class="fs-12 text-warning ms-1"><i
-                                              class="ti ti-trending-up mx-1"></i>3.5%</span>
-                                      <div class="fw-normal d-flex align-items-center mb-2 mt-4">
+                                              class="mx-1 ti ti-trending-up"></i>3.5%</span>
+                                      <div class="mt-4 mb-2 fw-normal d-flex align-items-center">
                                           <p class="mb-0 flex-grow-1">Active Sales</p>
                                           <span>3,274</span>
                                       </div>
@@ -115,7 +119,7 @@
                                               aria-valuemax="100"></div>
                                       </div>
                                   </div>
-                                  <div class="card-footer p-0 text-center">
+                                  <div class="p-0 text-center card-footer">
                                       <div class="d-grid">
                                           <a href="javascript:void(0);"
                                               class="px-3 py-2 text-warning">View Details <i
@@ -125,10 +129,10 @@
                               </div>
                           </div>
                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
-                              <div class="card overflow-hidden">
-                                  <div class="card-body p-0">
+                              <div class="overflow-hidden card">
+                                  <div class="p-0 card-body">
                                       <div class="px-3 pt-3">
-                                          <div class="d-flex align-items-center mb-3">
+                                          <div class="mb-3 d-flex align-items-center">
                                               <span
                                                   class="avatar avatar-md stat-avatar rounded-circle text-bg-primary fs-18 min-w-fit-content me-2">
                                                   <i class="bi bi-bar-chart"></i>
@@ -137,7 +141,7 @@
                                           </div>
                                           <span class="fs-5">$8,889</span>
                                           <span class="fs-12 text-success ms-1"><i
-                                                  class="ti ti-trending-up mx-1"></i>5.5%</span>
+                                                  class="mx-1 ti ti-trending-up"></i>5.5%</span>
                                       </div>
                                       <div id="totalRevenue"></div>
                                   </div>
@@ -154,7 +158,7 @@
                                           <li class="list-item activity-avatar-before info">
                                               <div class="d-flex">
                                                   <div
-                                                      class="avatar p-1 avatar-md rounded-circle bg-info-transparent min-w-fit-content">
+                                                      class="p-1 avatar avatar-md rounded-circle bg-info-transparent min-w-fit-content">
                                                       <span
                                                           class="avatar avatar-sm activity-avatar bg-info min-w-fit-content rounded-circle cover-image"><i
                                                               class="bi bi-briefcase fs-14"></i></span>
@@ -176,7 +180,7 @@
                                           <li class="list-item activity-avatar-before danger">
                                               <div class="d-flex">
                                                   <div
-                                                      class="avatar p-1 avatar-md rounded-circle bg-danger-transparent min-w-fit-content">
+                                                      class="p-1 avatar avatar-md rounded-circle bg-danger-transparent min-w-fit-content">
                                                       <span
                                                           class="avatar avatar-sm activity-avatar bg-danger min-w-fit-content rounded-circle cover-image"><i
                                                               class="bi bi-brightness-high fs-14"></i></span>
@@ -198,7 +202,7 @@
                                           <li class="list-item activity-avatar-before success">
                                               <div class="d-flex">
                                                   <div
-                                                      class="avatar p-1 avatar-md rounded-circle bg-success-transparent min-w-fit-content">
+                                                      class="p-1 avatar avatar-md rounded-circle bg-success-transparent min-w-fit-content">
                                                       <span
                                                           class="avatar avatar-sm activity-avatar bg-success min-w-fit-content rounded-circle cover-image"><i
                                                               class="bi bi-peace fs-14"></i></span>
@@ -220,7 +224,7 @@
                                           <li class="list-item activity-avatar-before warning">
                                               <div class="d-flex">
                                                   <div
-                                                      class="avatar p-1 avatar-md rounded-circle bg-warning-transparent box-shadow-warning min-w-fit-content">
+                                                      class="p-1 avatar avatar-md rounded-circle bg-warning-transparent box-shadow-warning min-w-fit-content">
                                                       <span
                                                           class="avatar avatar-sm activity-avatar bg-warning min-w-fit-content rounded-circle cover-image"><i
                                                               class="bi bi-clock-history fs-14"></i></span>
@@ -242,8 +246,8 @@
                                           <li class="list-item activity-avatar-before danger">
                                               <div class="d-flex">
                                                   <div
-                                                      class="avatar p-1 avatar-md rounded-circle bg-danger-transparent min-w-fit-content">
-                                                     
+                                                      class="p-1 avatar avatar-md rounded-circle bg-danger-transparent min-w-fit-content">
+
                                                       <span
                                                           class="avatar avatar-sm activity-avatar bg-danger min-w-fit-content rounded-circle cover-image"><i
                                                               class="bi bi-brightness-high fs-14"></i></span>
@@ -265,7 +269,7 @@
                                           <li class="list-item activity-avatar-before info">
                                               <div class="d-flex">
                                                   <div
-                                                      class="avatar p-1 avatar-md rounded-circle bg-info-transparent min-w-fit-content">
+                                                      class="p-1 avatar avatar-md rounded-circle bg-info-transparent min-w-fit-content">
                                                       <span
                                                           class="avatar avatar-sm activity-avatar bg-info min-w-fit-content rounded-circle cover-image"><i
                                                               class="bi bi-briefcase fs-14"></i></span>
@@ -287,7 +291,7 @@
                                           <li class="list-item activity-avatar-before primary">
                                               <div class="d-flex">
                                                   <div
-                                                      class="avatar p-1 avatar-md rounded-circle bg-primary-transparent min-w-fit-content">
+                                                      class="p-1 avatar avatar-md rounded-circle bg-primary-transparent min-w-fit-content">
                                                       <span
                                                           class="avatar avatar-sm activity-avatar bg-primary min-w-fit-content rounded-circle cover-image"><i
                                                               class="bi bi-broadcast-pin fs-14"></i></span>
@@ -318,7 +322,7 @@
                               <h6 class="card-title flex-grow-1 text-truncate me-3">Monthly Orders Analytics</h6>
                               <div class="dropdown">
                                   <a href="javascript:void(0);" class="btn btn-primary-light btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
-                                      View All<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+                                      View All<i class="align-middle ri-arrow-down-s-line ms-1 d-inline-block"></i>
                                   </a>
                                   <ul class="dropdown-menu" role="menu">
                                       <li><a class="dropdown-item" href="javascript:void(0);">Today</a></li>
@@ -341,7 +345,7 @@
                                           Products</h6>
                                           <div class="dropdown">
                                               <a href="javascript:void(0);" class="btn btn-primary-light btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
-                                                  View All<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+                                                  View All<i class="align-middle ri-arrow-down-s-line ms-1 d-inline-block"></i>
                                               </a>
                                               <ul class="dropdown-menu" role="menu">
                                                   <li><a class="dropdown-item" href="javascript:void(0);">Today</a></li>
@@ -352,9 +356,9 @@
                                               </ul>
                                           </div>
                                   </div>
-                                  <div class="card-body p-0">
+                                  <div class="p-0 card-body">
                                       <div class="table-responsive">
-                                          <table class="table table-hover card-table mb-0">
+                                          <table class="table mb-0 table-hover card-table">
                                               <thead>
                                                   <tr>
                                                       <th class="ps-3">Products</th>
@@ -574,10 +578,10 @@
                                           </div>
                                           <p class="mb-1 fs-13 op-8">You have got 5 new offers, Track here<br> the Sales data and best deals here.</p>
                                           <span class="fs-16">3,531</span>
-                                          <span class="fs-12 op-7 ms-1"><i class="ti ti-trending-up mx-1"></i>0.5%</span>
+                                          <span class="fs-12 op-7 ms-1"><i class="mx-1 ti ti-trending-up"></i>0.5%</span>
                                       </div>
                                       <div class="min-w-fit-content">
-                                          <span class="avatar avatar-xxl bg-transparent">
+                                          <span class="bg-transparent avatar avatar-xxl">
                                               <img src="../assets/images/png/6.png" class="op-7" alt="img">
                                           </span>
                                       </div>
@@ -588,9 +592,9 @@
                               <div class="card">
                                   <div class="card-body">
                                       <div
-                                          class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+                                          class="flex-wrap mb-3 d-flex justify-content-between align-items-center">
                                           <div id="ethCoin"></div>
-                                          <div class="min-w-fit-content mb-3">
+                                          <div class="mb-3 min-w-fit-content">
                                               <span
                                                   class="avatar avatar-md br-5 bg-primary-transparent rounded-circle text-primary">
                                                   <i class="bi bi-briefcase fs-18"></i>
@@ -602,7 +606,7 @@
                                           <div class="d-flex justify-content-between align-items-center">
                                               <span class="fs-5">60</span>
                                               <span class="fs-12 text-primary ms-1"><i
-                                                      class="ti ti-trending-down mx-1"></i>8.0%</span>
+                                                      class="mx-1 ti ti-trending-down"></i>8.0%</span>
                                           </div>
                                       </div>
                                   </div>
@@ -612,9 +616,9 @@
                               <div class="card">
                                   <div class="card-body">
                                       <div
-                                          class="d-flex justify-content-between align-items-center flex-wrap mb-3">
+                                          class="flex-wrap mb-3 d-flex justify-content-between align-items-center">
                                           <div id="ethCoin1"></div>
-                                          <div class="min-w-fit-content mb-3">
+                                          <div class="mb-3 min-w-fit-content">
                                               <span
                                                   class="avatar avatar-md br-5 bg-secondary-transparent rounded-circle text-secondary">
                                                   <i class="fe fe-airplay fs-18"></i>
@@ -626,7 +630,7 @@
                                           <div class="d-flex justify-content-between align-items-center">
                                               <span class="fs-5">40</span>
                                               <span class="fs-12 text-secondary ms-1"><i
-                                                      class="ti ti-trending-down mx-1"></i>4.0%</span>
+                                                      class="mx-1 ti ti-trending-down"></i>4.0%</span>
                                           </div>
                                       </div>
                                   </div>
@@ -635,14 +639,14 @@
                           <div class="col-xl-12">
                               <div class="card">
                                   <div
-                                      class="card-header border-bottom justify-content-between flex-wrap gap-2">
+                                      class="flex-wrap gap-2 card-header border-bottom justify-content-between">
                                       <div>
-                                          <h6 class="card-title flex-grow-1 text-truncate me-3 mb-1">Top
+                                          <h6 class="mb-1 card-title flex-grow-1 text-truncate me-3">Top
                                               Product Categories</h6>
                                       </div>
                                       <div class="dropdown">
                                           <a href="javascript:void(0);" class="btn btn-primary-light btn-sm" data-bs-toggle="dropdown" aria-expanded="false">
-                                              View All<i class="ri-arrow-down-s-line align-middle ms-1 d-inline-block"></i>
+                                              View All<i class="align-middle ri-arrow-down-s-line ms-1 d-inline-block"></i>
                                           </a>
                                           <ul class="dropdown-menu" role="menu">
                                               <li><a class="dropdown-item" href="javascript:void(0);">Today</a></li>
@@ -655,7 +659,7 @@
                                   </div>
                                   <div class="card-body">
                                       <div
-                                          class="d-flex align-items-center avatar-before primary mb-3 flex-wrap gap-2">
+                                          class="flex-wrap gap-2 mb-3 d-flex align-items-center avatar-before primary">
                                           <span
                                               class="avatar avatar-md stat-avatar rounded-circle fs-18 bg-primary-transparent min-w-fit-content">
                                               <i class="bi bi-diagram-3"></i>
@@ -667,13 +671,13 @@
                                                   clothing</small>
                                           </div>
                                           <div>
-                                              <span class="badge bg-light text-dark p-2"><i
+                                              <span class="p-2 badge bg-light text-dark"><i
                                                       class="bi bi-circle-fill fs-8 me-1 text-primary"></i>40
                                                   available</span>
                                           </div>
                                       </div>
                                       <div
-                                          class="d-flex align-items-center avatar-before warning mb-3 flex-wrap gap-2">
+                                          class="flex-wrap gap-2 mb-3 d-flex align-items-center avatar-before warning">
                                           <span
                                               class="avatar avatar-md stat-avatar rounded-circle fs-18 bg-warning-transparent min-w-fit-content">
                                               <i class="bi bi-cast"></i>
@@ -684,13 +688,13 @@
                                               <small class="text-muted fs-12">All models of phones</small>
                                           </div>
                                           <div>
-                                              <span class="badge bg-light text-dark p-2"><i
+                                              <span class="p-2 badge bg-light text-dark"><i
                                                       class="bi bi-circle-fill fs-8 me-1 text-warning"></i>60
                                                   available</span>
                                           </div>
                                       </div>
                                       <div
-                                          class="d-flex align-items-center avatar-before indigo mb-3 flex-wrap gap-2">
+                                          class="flex-wrap gap-2 mb-3 d-flex align-items-center avatar-before indigo">
                                           <span
                                               class="avatar avatar-md stat-avatar rounded-circle fs-18 bd-indigo-100 text-indigo min-w-fit-content">
                                               <i class="bi bi-bag-check"></i>
@@ -702,13 +706,13 @@
                                                   Electronics</small>
                                           </div>
                                           <div>
-                                              <span class="badge bg-light text-dark p-2"><i
+                                              <span class="p-2 badge bg-light text-dark"><i
                                                       class="bi bi-circle-fill fs-8 me-1 text-success"></i>70
                                                   available</span>
                                           </div>
                                       </div>
                                       <div
-                                          class="d-flex align-items-center avatar-before info mb-3 flex-wrap gap-2">
+                                          class="flex-wrap gap-2 mb-3 d-flex align-items-center avatar-before info">
                                           <span
                                               class="avatar avatar-md stat-avatar rounded-circle fs-18 bg-info-transparent min-w-fit-content">
                                               <i class="bi bi-house-door"></i>
@@ -720,13 +724,13 @@
                                                   etc..</small>
                                           </div>
                                           <div>
-                                              <span class="badge bg-light text-dark p-2"><i
+                                              <span class="p-2 badge bg-light text-dark"><i
                                                       class="bi bi-circle-fill fs-8 me-1 text-info"></i>80
                                                   available</span>
                                           </div>
                                       </div>
                                       <div
-                                          class="d-flex align-items-center avatar-before danger mb-0 flex-wrap gap-2">
+                                          class="flex-wrap gap-2 mb-0 d-flex align-items-center avatar-before danger">
                                           <span
                                               class="avatar avatar-md stat-avatar rounded-circle fs-18 bg-danger-transparent min-w-fit-content">
                                               <i class="bi bi-house-door"></i>
@@ -738,7 +742,7 @@
                                                   etc..</small>
                                           </div>
                                           <div>
-                                              <span class="badge bg-light text-dark p-2"><i
+                                              <span class="p-2 badge bg-light text-dark"><i
                                                       class="bi bi-circle-fill fs-8 me-1 text-info"></i>80
                                                   available</span>
                                           </div>
@@ -762,15 +766,15 @@
           <div class="col-xl-12">
               <div class="card">
                   <div class="card-header">
-                      <h3 class="card-title mb-0">Product Sales</h3>
+                      <h3 class="mb-0 card-title">Product Sales</h3>
                   </div>
-                  <div class="card-body pt-4">
+                  <div class="pt-4 card-body">
                       <div class="grid-margin">
                           <div class="table-responsive">
-                              <table class="table table-bordered text-nowrap mb-0">
+                              <table class="table mb-0 table-bordered text-nowrap">
                                   <thead class="border-top">
                                       <tr>
-                                          <th class="wp-5 border-bottom-0 my-auto text-center">
+                                          <th class="my-auto text-center wp-5 border-bottom-0">
                                               <input class="form-check-input check-all"
                                                   type="checkbox" value="" id="checkebox-sm">
                                           </th>
@@ -778,7 +782,7 @@
                                           <th class="border-bottom-0">Product</th>
                                           <th class="border-bottom-0">Ratings</th>
                                           <th class="border-bottom-0">Customer</th>
-                                          <th class="border-bottom-0 text-center">Quantity</th>
+                                          <th class="text-center border-bottom-0">Quantity</th>
                                           <th class="border-bottom-0">Status</th>
                                           <th class="border-bottom-0">Price</th>
                                           <th class="border-bottom-0">Ordered date</th>
@@ -787,7 +791,7 @@
                                   </thead>
                                   <tbody>
                                       <tr class="border-bottom user-list">
-                                          <td class="user-checkbox text-center">
+                                          <td class="text-center user-checkbox">
                                               <input class="form-check-input" type="checkbox"
                                                   value="" checked="">
                                           </td>
@@ -816,7 +820,7 @@
                                           <td>
                                               <span class="me-2">25 Mar 2022</span></td>
                                           <td>
-                                              <div class="hstack gap-2 fs-1">
+                                              <div class="gap-2 hstack fs-1">
                                                   <a aria-label="anchor" href="javascript:void(0);"
                                                       class="btn btn-icon btn-sm btn-info-light btn-wave waves-effect waves-light">
                                                       <i class="ri-edit-line"></i></a>
@@ -827,7 +831,7 @@
                                           </td>
                                       </tr>
                                       <tr class="border-bottom user-list">
-                                          <td class="user-checkbox text-center">
+                                          <td class="text-center user-checkbox">
                                               <input class="form-check-input" type="checkbox"
                                                   value="">
                                           </td>
@@ -856,7 +860,7 @@
                                           <td>
                                               <span class="me-2">25 Mar 2022</span></td>
                                           <td>
-                                              <div class="hstack gap-2 fs-1">
+                                              <div class="gap-2 hstack fs-1">
                                                   <a aria-label="anchor" href="javascript:void(0);"
                                                       class="btn btn-icon btn-sm btn-info-light btn-wave waves-effect waves-light">
                                                       <i class="ri-edit-line"></i></a>
@@ -867,7 +871,7 @@
                                           </td>
                                       </tr>
                                       <tr class="border-bottom user-list">
-                                          <td class="user-checkbox text-center">
+                                          <td class="text-center user-checkbox">
                                               <input class="form-check-input" type="checkbox"
                                                   value="">
                                           </td>
@@ -898,7 +902,7 @@
                                           <td>
                                               <span class="me-2">27 Feb 2022</span></td>
                                           <td>
-                                              <div class="hstack gap-2 fs-1">
+                                              <div class="gap-2 hstack fs-1">
                                                   <a aria-label="anchor" href="javascript:void(0);"
                                                       class="btn btn-icon btn-sm btn-info-light btn-wave waves-effect waves-light">
                                                       <i class="ri-edit-line"></i></a>
@@ -909,7 +913,7 @@
                                           </td>
                                       </tr>
                                       <tr class="border-bottom user-list">
-                                          <td class="user-checkbox text-center">
+                                          <td class="text-center user-checkbox">
                                               <input class="form-check-input" type="checkbox"
                                                   value="">
                                           </td>
@@ -938,7 +942,7 @@
                                               <span class="me-2">2 Apr 2022</span>
                                           </td>
                                           <td>
-                                              <div class="hstack gap-2 fs-1">
+                                              <div class="gap-2 hstack fs-1">
                                                   <a aria-label="anchor" href="javascript:void(0);"
                                                       class="btn btn-icon btn-sm btn-info-light btn-wave waves-effect waves-light">
                                                       <i class="ri-edit-line"></i></a>
@@ -948,7 +952,7 @@
                                               </div>
                                           </td>
                                       <tr class="border-bottom user-list">
-                                          <td class="user-checkbox text-center">
+                                          <td class="text-center user-checkbox">
                                               <input class="form-check-input" type="checkbox"
                                                   value="">
                                           </td>
@@ -977,7 +981,7 @@
                                           <td>
                                               <span class="me-2">8 Apr 2022</span></td>
                                           <td>
-                                              <div class="hstack gap-2 fs-1">
+                                              <div class="gap-2 hstack fs-1">
                                                   <a aria-label="anchor" href="javascript:void(0);"
                                                       class="btn btn-icon btn-sm btn-info-light btn-wave waves-effect waves-light">
                                                       <i class="ri-edit-line"></i></a>
