@@ -26,6 +26,10 @@ return new class extends Migration
             $table->string('website')->nullable();
             $table->string('about')->nullable();
             $table->json('experience')->nullable();
+            $table->string('status')->default('active');
+            $table->string('description')->nullable();
+            $table->string('gender')->nullable();
+            $table->date('date_of_birth')->nullable();
 
 
             $table->timestamps();
