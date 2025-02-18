@@ -3,6 +3,7 @@
 use App\Http\Controllers\Doctor\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Doctor\AvailableTimeController;
+use App\Http\Controllers\Doctor\profileController;
 
 Route::middleware(['doctor'])->prefix('doctor')->group(function () {
     Route::get('available-time', [AvailableTimeController::class, 'index'])->name('doctor.available-time.index');
@@ -14,3 +15,8 @@ Route::middleware(['doctor'])->prefix('doctor')->group(function () {
     Route::get('available-time/{id}/show', [AvailableTimeController::class, 'show'])->name('doctor.available-time.show');
 });
 
+Route::middleware(['doctor'])->prefix('doctor')->group(function () {
+    Route::get('profile', [profileController::class, 'index'])->name('doctor.profile.index');
+    Route::put('profile', [profileController::class, 'update'])->name('doctor.profile.update');
+    Route::post('profile/image', [profileController::class, 'updateImage'])->name('doctor.profile.updateImage');
+});
