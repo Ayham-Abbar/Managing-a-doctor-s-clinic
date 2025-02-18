@@ -1,5 +1,5 @@
    <!-- app-header -->
-           <header class="app-header header sticky">
+           <header class="sticky app-header header">
 
             <!-- Start::main-header-container -->
             <div class="main-header-container container-fluid">
@@ -43,14 +43,14 @@
                     <!-- End::header-element -->
 
 
-                    <div class="main-header-center  d-none d-lg-block  header-link">
+                    <div class="main-header-center d-none d-lg-block header-link">
                         <input type="text" class="form-control" id="typehead" placeholder="Search for results..."
                             autocomplete="off">
                         <button class="btn pe-1"><i class="fe fe-search" aria-hidden="true"></i></button>
                         <div id="headersearch" class="header-search">
                             <div class="p-3">
                                 <div class="">
-                                    <p class="fw-semibold text-muted mb-2 fs-13">Recent Searches</p>
+                                    <p class="mb-2 fw-semibold text-muted fs-13">Recent Searches</p>
                                     <div class="ps-2">
                                         <a href="javascript:void(0);" class="search-tags"><i
                                                 class="fe fe-search me-2"></i>People<span></span></a>
@@ -61,37 +61,37 @@
                                     </div>
                                 </div>
                                 <div class="mt-3">
-                                    <p class="fw-semibold text-muted mb-2 fs-13">Apps and pages</p>
+                                    <p class="mb-2 fw-semibold text-muted fs-13">Apps and pages</p>
                                     <ul class="ps-2">
-                                        <li class="p-1 d-flex align-items-center text-muted mb-2 search-app">
+                                        <li class="p-1 mb-2 d-flex align-items-center text-muted search-app">
                                             <a href="calendar2.html"><span><i
                                                         class='bi bi-calendar me-2 fs-14 bg-primary-transparent avatar rounded-circle '></i>Calendar</span></a>
                                         </li>
-                                        <li class="p-1 d-flex align-items-center text-muted mb-2 search-app">
+                                        <li class="p-1 mb-2 d-flex align-items-center text-muted search-app">
                                             <a href="email-inbox.html"><span><i
                                                         class='bi bi-envelope me-2 fs-14 bg-primary-transparent avatar rounded-circle'></i>Mail</span></a>
                                         </li>
-                                        <li class="p-1 d-flex align-items-center text-muted mb-2 search-app">
+                                        <li class="p-1 mb-2 d-flex align-items-center text-muted search-app">
                                             <a href="buttons.html"><span><i
                                                         class='bi bi-dice-1 me-2 fs-14 bg-primary-transparent avatar rounded-circle '></i>Buttons</span></a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="mt-3">
-                                    <p class="fw-semibold text-muted mb-2 fs-13">Links</p>
+                                    <p class="mb-2 fw-semibold text-muted fs-13">Links</p>
                                     <ul class="ps-2">
-                                        <li class="p-1 align-items-center text-muted mb-1 search-app">
+                                        <li class="p-1 mb-1 align-items-center text-muted search-app">
                                             <a href="javascript:void(0);"
                                                 class="text-primary"><u>http://spruko/html/spruko.com</u></a>
                                         </li>
-                                        <li class="p-1 align-items-center text-muted mb-1 search-app">
+                                        <li class="p-1 mb-1 align-items-center text-muted search-app">
                                             <a href="javascript:void(0);"
                                                 class="text-primary"><u>http://spruko/demo/spruko.com</u></a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                            <div class="py-3 border-top px-0">
+                            <div class="px-0 py-3 border-top">
                                 <div class="text-center">
                                     <a href="javascript:void(0);"
                                         class="text-primary text-decoration-underline fs-15">View all</a>
@@ -114,7 +114,7 @@
                         aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon fe fe-more-vertical"></span>
                     </button>
-                    <div class="navbar navbar-collapse responsive-navbar p-0">
+                    <div class="p-0 navbar navbar-collapse responsive-navbar">
                         <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
                             <div class="d-flex align-items-center">
                                 <!-- Start::header-element -->
@@ -131,7 +131,7 @@
                                     <div class="main-header-dropdown dropdown-menu dropdown-menu-end"
                                         data-popper-placement="none">
                                         <ul class="mb-0">
-                                            <li class="dropdown-item mb-1">
+                                            <li class="mb-1 dropdown-item">
                                                 <div class="d-flex align-items-center">
                                                     <div class="pe-2">
                                                         <img src="{{ asset('assets/images/flags-img/india_flag.jpg') }}"
@@ -142,7 +142,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown-item mb-1">
+                                            <li class="mb-1 dropdown-item">
                                                 <div class="d-flex align-items-center">
                                                     <div class="pe-2">
                                                         <img src="{{ asset('assets/images/flags-img/malaysia.jpg') }}"
@@ -153,7 +153,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown-item mb-1">
+                                            <li class="mb-1 dropdown-item">
                                                 <div class="d-flex align-items-center">
                                                     <div class="pe-2">
                                                         <img src="{{ asset('assets/images/flags-img/italy_flag.jpg') }}"
@@ -164,7 +164,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown-item mb-1">
+                                            <li class="mb-1 dropdown-item">
                                                 <div class="d-flex align-items-center">
                                                     <div class="pe-2">
                                                         <img src="{{ asset('assets/images/flags-img/argentina.jpg') }}"
@@ -175,7 +175,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown-item active mb-1">
+                                            <li class="mb-1 dropdown-item active">
                                                 <div class="d-flex align-items-center">
                                                     <div class="pe-2">
                                                         <img src="{{ asset('assets/images/flags-img/us_flag.jpg') }}"
@@ -186,7 +186,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown-item mb-1">
+                                            <li class="mb-1 dropdown-item">
                                                 <div class="d-flex align-items-center">
                                                     <div class="pe-2">
                                                         <img src="{{ asset('assets/images/flags-img/turkey.jpg') }}"
@@ -245,7 +245,7 @@
                                     <!-- Start::header-link -->
                                     <a href="javascript:void(0);" class="header-link d-lg-none d-block"
                                         data-bs-toggle="modal" data-bs-target="#searchModal">
-                                        <!-- <i class="bi bi-search-alt-2   ps-0"></i> -->
+                                        <!-- <i class="bi bi-search-alt-2 ps-0"></i> -->
                                         <svg xmlns="http://www.w3.org/2000/svg" class="header-link-icon"
                                             viewBox="0 0 24 24" width="24px">
                                             <path d="M0 0h24v24H0V0z" fill="none" />
@@ -289,13 +289,13 @@
                                                         class="avatar avatar-md br-5 me-3">
                                                     <div class="flex-grow-1">
                                                         <div
-                                                            class="d-flex align-items-start justify-content-between mb-0">
+                                                            class="mb-0 d-flex align-items-start justify-content-between">
                                                             <div class="mb-0 fs-14 fw-semibold">
                                                                 <a href="cart.html" class="text-dark">SomeThing
                                                                     Phone</a>
                                                             </div>
                                                             <div>
-                                                                <span class="fs-15 mb-1">$1,299.00</span>
+                                                                <span class="mb-1 fs-15">$1,299.00</span>
                                                                 <a href="javascript:void(0);"
                                                                     class="header-cart-remove float-end dropdown-item-close"><i
                                                                         class="ti ti-trash"></i></a>
@@ -317,12 +317,12 @@
                                                         class="avatar avatar-md br-5 me-3">
                                                     <div class="flex-grow-1">
                                                         <div
-                                                            class="d-flex align-items-start justify-content-between mb-0">
+                                                            class="mb-0 d-flex align-items-start justify-content-between">
                                                             <div class="mb-0 fs-14 text-dark fw-semibold">
                                                                 <a href="cart.html" class="text-dark">Stop Watch</a>
                                                             </div>
                                                             <div>
-                                                                <span class="fs-15 mb-1">$179.29</span>
+                                                                <span class="mb-1 fs-15">$179.29</span>
                                                                 <a href="javascript:void(0);"
                                                                     class="header-cart-remove float-end dropdown-item-close"><i
                                                                         class="ti ti-trash"></i></a>
@@ -344,13 +344,13 @@
                                                         class="avatar avatar-md br-5 me-3">
                                                     <div class="flex-grow-1">
                                                         <div
-                                                            class="d-flex align-items-start justify-content-between mb-0">
+                                                            class="mb-0 d-flex align-items-start justify-content-between">
                                                             <div class="mb-0 fs-14 text-dark fw-semibold">
                                                                 <a href="cart.html" class="text-dark">Photo
                                                                     Frame</a>
                                                             </div>
                                                             <div>
-                                                                <span class="fs-15 mb-1">$29.00</span>
+                                                                <span class="mb-1 fs-15">$29.00</span>
                                                                 <a href="javascript:void(0);"
                                                                     class="header-cart-remove float-end dropdown-item-close"><i
                                                                         class="ti ti-trash"></i></a>
@@ -372,13 +372,13 @@
                                                         class="avatar avatar-md br-5 me-3">
                                                     <div class="flex-grow-1">
                                                         <div
-                                                            class="d-flex align-items-start justify-content-between mb-0">
+                                                            class="mb-0 d-flex align-items-start justify-content-between">
                                                             <div class="mb-0 fs-14 text-dark fw-semibold">
                                                                 <a href="cart.html" class="text-dark">Kikon
                                                                     Camera</a>
                                                             </div>
                                                             <div>
-                                                                <span class="fs-15 mb-1">$4,999.00</span>
+                                                                <span class="mb-1 fs-15">$4,999.00</span>
                                                                 <a href="javascript:void(0);"
                                                                     class="header-cart-remove float-end dropdown-item-close"><i
                                                                         class="ti ti-trash"></i></a>
@@ -400,13 +400,13 @@
                                                         class="avatar avatar-md br-5 me-3">
                                                     <div class="flex-grow-1">
                                                         <div
-                                                            class="d-flex align-items-start justify-content-between mb-0">
+                                                            class="mb-0 d-flex align-items-start justify-content-between">
                                                             <div class="mb-0 fs-14 text-dark fw-semibold">
                                                                 <a href="cart.html" class="text-dark">Canvas
                                                                     Shoes</a>
                                                             </div>
                                                             <div>
-                                                                <span class="fs-15 mb-1">$129.00</span>
+                                                                <span class="mb-1 fs-15">$129.00</span>
                                                                 <a href="javascript:void(0);"
                                                                     class="header-cart-remove float-end dropdown-item-close"><i
                                                                         class="ti ti-trash"></i></a>
@@ -434,8 +434,8 @@
                                                 <span class="avatar avatar-xl rounded-2 bg-warning-transparent">
                                                     <i class="ri-shopping-cart-2-line fs-2"></i>
                                                 </span>
-                                                <h6 class="fw-bold mb-1 mt-3">Your Cart is Empty</h6>
-                                                <a href="shop.html" class="btn btn-primary btn-wave btn-sm m-1"
+                                                <h6 class="mt-3 mb-1 fw-bold">Your Cart is Empty</h6>
+                                                <a href="shop.html" class="m-1 btn btn-primary btn-wave btn-sm"
                                                     data-abc="true">Back to Shop <i
                                                         class="bi bi-arrow-right ms-1"></i></a>
                                             </div>
@@ -471,9 +471,9 @@
                                                     id="notifiation-data">4 Items</a>
                                             </div>
                                         </div>
-                                        <div class="dropdown-divider my-0"></div>
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="dropdown-item mb-1">
+                                        <div class="my-0 dropdown-divider"></div>
+                                        <ul class="mb-0 list-unstyled">
+                                            <li class="mb-1 dropdown-item">
                                                 <div class="d-flex align-items-start">
                                                     <div class="pe-2">
                                                         <span class="avatar avatar-md bg-primary rounded-circle"><i
@@ -495,13 +495,13 @@
                                                                 </div>
                                                             </div>
                                                             <a href="javascript:void(0);"
-                                                                class="min-w-fit-content text-muted text-opacity-75 ms-1 dropdown-item-close1"><i
+                                                                class="text-opacity-75 min-w-fit-content text-muted ms-1 dropdown-item-close1"><i
                                                                     class="ti ti-x fs-16"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown-item mb-1">
+                                            <li class="mb-1 dropdown-item">
                                                 <div class="d-flex align-items-start">
                                                     <div class="pe-2">
                                                         <span
@@ -521,23 +521,23 @@
                                                                         11:00 AM - 45 minutes</span>
                                                                 </div>
                                                                 <a href="profile.html"
-                                                                    class="d-flex align-items-center mt-1">
+                                                                    class="mt-1 d-flex align-items-center">
                                                                     <span class="avatar avatar-sm brround">
                                                                         <img src="{{ asset('assets/images/users/1.jpg') }}"
                                                                             class="brround" alt="img">
                                                                     </span>
-                                                                    <span class="ms-2 fs-13 text-gray-600">Nile
+                                                                    <span class="text-gray-600 ms-2 fs-13">Nile
                                                                         Rebort</span>
                                                                 </a>
                                                             </div>
                                                             <a href="javascript:void(0);"
-                                                                class="min-w-fit-content text-muted text-opacity-75 ms-1 dropdown-item-close1"><i
+                                                                class="text-opacity-75 min-w-fit-content text-muted ms-1 dropdown-item-close1"><i
                                                                     class="ti ti-x fs-16"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown-item mb-1">
+                                            <li class="mb-1 dropdown-item">
                                                 <div class="d-flex align-items-start">
                                                     <div class="pe-2">
                                                         <span class="avatar avatar-md bg-pink rounded-circle"><i
@@ -550,7 +550,7 @@
                                                                 class="mb-0 fs-13 font-weight-semibold text-dark">Taylor
                                                                 invite to a design channel</a>
                                                             <a href="javascript:void(0);"
-                                                                class="min-w-fit-content text-muted text-opacity-75 ms-1 dropdown-item-close1"><i
+                                                                class="text-opacity-75 min-w-fit-content text-muted ms-1 dropdown-item-close1"><i
                                                                     class="ti ti-x fs-16"></i></a>
                                                         </div>
                                                         <div class="fs-12">
@@ -566,7 +566,7 @@
                                                     </div>
                                                 </div>
                                             </li>
-                                            <li class="dropdown-item mb-1">
+                                            <li class="mb-1 dropdown-item">
                                                 <div class="d-flex align-items-start">
                                                     <div class="pe-2">
                                                         <span class="avatar avatar-md bg-warning rounded-circle"><i
@@ -580,7 +580,7 @@
                                                                 Placed <span class="text-primary">ID:
                                                                     #1116773</span></a>
                                                             <a href="javascript:void(0);"
-                                                                class="min-w-fit-content text-muted text-opacity-75 ms-1 dropdown-item-close1"><i
+                                                                class="text-opacity-75 min-w-fit-content text-muted ms-1 dropdown-item-close1"><i
                                                                     class="ti ti-x fs-16"></i></a>
                                                         </div>
                                                         <div
@@ -605,7 +605,7 @@
                                                 <span class="avatar avatar-xl rounded-2 bg-secondary-transparent">
                                                     <i class="ri-notification-off-line fs-2"></i>
                                                 </span>
-                                                <h6 class="fw-semibold mt-3">No New Notifications</h6>
+                                                <h6 class="mt-3 fw-semibold">No New Notifications</h6>
                                             </div>
                                         </div>
                                     </div>
@@ -627,19 +627,19 @@
                                     </a>
                                     <!-- End::header-link|dropdown-toggle -->
                                     <!-- Start::main-header-dropdown -->
-                                    <div class="main-header-dropdown header-shortcuts-dropdown dropdown-menu pb-0 dropdown-menu-end"
+                                    <div class="pb-0 main-header-dropdown header-shortcuts-dropdown dropdown-menu dropdown-menu-end"
                                         aria-labelledby="notificationDropdown">
                                         <div class="p-3">
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <p class="mb-0 fs-17 fw-semibold">Related Apps</p>
                                             </div>
                                         </div>
-                                        <div class="dropdown-divider my-0"></div>
-                                        <div class="main-header-shortcuts py-1 px-4" id="header-shortcut-scroll">
+                                        <div class="my-0 dropdown-divider"></div>
+                                        <div class="px-4 py-1 main-header-shortcuts" id="header-shortcut-scroll">
                                             <div class="row">
-                                                <div class="col-4 p-1 mt-0">
+                                                <div class="p-1 mt-0 col-4">
                                                     <a href="chat.html">
-                                                        <div class="text-center p-3 related-app border rounded-2">
+                                                        <div class="p-3 text-center border related-app rounded-2">
                                                             <span>
                                                                 <i
                                                                     class="mdi mdi-message-outline text-primary fs-24"></i>
@@ -648,9 +648,9 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-4 p-1 mt-0">
+                                                <div class="p-1 mt-0 col-4">
                                                     <a href="file-manager.html">
-                                                        <div class="text-center p-3 related-app border rounded-2">
+                                                        <div class="p-3 text-center border related-app rounded-2">
                                                             <span>
                                                                 <i
                                                                     class="mdi mdi-file-multiple-outline text-info fs-24"></i>
@@ -659,9 +659,9 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-4 p-1 mt-0">
+                                                <div class="p-1 mt-0 col-4">
                                                     <a href="calendar2.html">
-                                                        <div class="text-center p-3 related-app border rounded-2">
+                                                        <div class="p-3 text-center border related-app rounded-2">
                                                             <span>
                                                                 <i
                                                                     class="mdi mdi-calendar-range-outline text-warning fs-24"></i>
@@ -670,9 +670,9 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-4 p-1 mt-0">
+                                                <div class="p-1 mt-0 col-4">
                                                     <a href="settings.html">
-                                                        <div class="text-center p-3 related-app border rounded-2">
+                                                        <div class="p-3 text-center border related-app rounded-2">
                                                             <span>
                                                                 <i class="mdi mdi-cog-outline text-info fs-24"></i>
                                                             </span>
@@ -680,9 +680,9 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-4 p-1 mt-0">
+                                                <div class="p-1 mt-0 col-4">
                                                     <a href="faq.html">
-                                                        <div class="text-center p-3 related-app border rounded-2">
+                                                        <div class="p-3 text-center border related-app rounded-2">
                                                             <span>
                                                                 <i
                                                                     class="mdi mdi-help-circle-outline text-success fs-24"></i>
@@ -691,9 +691,9 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-4 p-1 mt-0">
+                                                <div class="p-1 mt-0 col-4">
                                                     <a href="profile.html">
-                                                        <div class="text-center p-3 related-app border rounded-2">
+                                                        <div class="p-3 text-center border related-app rounded-2">
                                                             <span>
                                                                 <i
                                                                     class="mdi mdi-account-outline text-primary fs-24"></i>
@@ -702,9 +702,9 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-4 p-1 mt-0">
+                                                <div class="p-1 mt-0 col-4">
                                                     <a href="about.html">
-                                                        <div class="text-center p-3 related-app border rounded-2">
+                                                        <div class="p-3 text-center border related-app rounded-2">
                                                             <span>
                                                                 <i class="mdi mdi-phone text-primary fs-24"></i>
                                                             </span>
@@ -712,9 +712,9 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-4 p-1 mt-0">
+                                                <div class="p-1 mt-0 col-4">
                                                     <a href="rating.html">
-                                                        <div class="text-center p-3 related-app border rounded-2">
+                                                        <div class="p-3 text-center border related-app rounded-2">
                                                             <span>
                                                                 <i
                                                                     class="mdi mdi-comment-quote-outline text-secondary fs-24"></i>
@@ -723,9 +723,9 @@
                                                         </div>
                                                     </a>
                                                 </div>
-                                                <div class="col-4 p-1 mt-0">
+                                                <div class="p-1 mt-0 col-4">
                                                     <a href="login.html">
-                                                        <div class="text-center p-3 related-app border rounded-2">
+                                                        <div class="p-3 text-center border related-app rounded-2">
                                                             <span>
                                                                 <i class="mdi mdi-logout text-warning fs-24 "></i>
                                                             </span>
@@ -777,15 +777,17 @@
                                                 height="30" class="rounded-circle">
                                         </span>
                                         <div class="d-xl-block d-none lh-1">
-                                            <h6 class="fs-13 font-weight-semibold mb-0">Json Taylor</h6>
+                                            <h6 class="mb-0 fs-13 font-weight-semibold">Json Taylor</h6>
                                             <span class="op-8 fs-10">Web Designer 12</span>
                                         </div>
                                     </a>
                                     <!-- End::header-link|dropdown-toggle -->
-                                    <ul class="dropdown-menu pt-0 overflow-hidden dropdown-menu-end mt-1"
+                                    <ul class="pt-0 mt-1 overflow-hidden dropdown-menu dropdown-menu-end"
                                         aria-labelledby="mainHeaderProfile">
-                                        <li><a class="dropdown-item" href="profile.html"><i
+
+                                        <li><a class="dropdown-item" href="@if(auth()->guard('doctor')->check()) {{ route('doctor.profile.index')}} @elseif(auth()->guard('admin')->check()) {{ route('admin.profile.index')}} @elseif(auth()->guard('accountant')->check()) {{ route('accountant.profile.index')}} @endif"><i
                                                     class="ti ti-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
+
                                         <li><a class="dropdown-item" href="index.html"><i
                                                     class="ti ti-inbox fs-18 me-2 op-7"></i>Dashboard</a></li>
                                         <li><a class="dropdown-item border-block-end" href="blog.html"><i
@@ -797,7 +799,7 @@
                                         <li><a class="dropdown-item border-block-end" href="faq.html"><i
                                                     class="ti ti-help fs-18 me-2 op-7"></i>Help Center</a></li>
                                         <li>
-                                            <hr class="dropdown-divider my-0">
+                                            <hr class="my-0 dropdown-divider">
                                         </li>
                                         <li><a class="dropdown-item" href="register.html"><i
                                                     class="ti ti-user-plus fs-18 me-2 op-7"></i>Add Another
@@ -805,14 +807,14 @@
                                         <li><a class="dropdown-item" href="@auth('admin') {{ route('admin.logout') }} @elseif(auth('doctor')) {{ route('doctor.logout') }} @elseif(auth('accountant')) {{ route('accountant.logout') }} @endif"><i
                                                     class="ti ti-power fs-18 me-2 op-7"></i>Sign Out</a></li>
                                         <li>
-                                            <hr class="dropdown-divider my-0">
+                                            <hr class="my-0 dropdown-divider">
                                         </li>
-                                        <li class="d-flex justify-content-center p-2">
-                                            <span><a class="fs-12 px-2 border-end"
+                                        <li class="p-2 d-flex justify-content-center">
+                                            <span><a class="px-2 fs-12 border-end"
                                                     href="javascript:void(0);">Privacy Policy</a></span>
-                                            <span><a class="fs-12 px-2 border-end"
+                                            <span><a class="px-2 fs-12 border-end"
                                                     href="javascript:void(0);">Terms</a></span>
-                                            <span><a class="fs-12 px-2"
+                                            <span><a class="px-2 fs-12"
                                                     href="javascript:void(0);">Cookies</a></span>
                                         </li>
                                     </ul>
