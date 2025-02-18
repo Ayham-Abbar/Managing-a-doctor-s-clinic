@@ -65,7 +65,7 @@
                              <a href="{{ route('doctor.create') }}" class="side-menu__item">Add Doctor</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">Doctors List</a>
+                             <a href="{{ route('doctor.index') }}" class="side-menu__item">Doctors List</a>
                          </li>
                          <li class="slide has-sub">
                              <a href="javascript:void(0);" class="side-menu__item">Extension
