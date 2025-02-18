@@ -785,7 +785,7 @@
                                     <ul class="pt-0 mt-1 overflow-hidden dropdown-menu dropdown-menu-end"
                                         aria-labelledby="mainHeaderProfile">
 
-                                        <li><a class="dropdown-item" href="@if(auth()->guard('doctor')->check()) {{ route('doctor.profile.index')}} @elseif(auth()->guard('admin')->check()) {{ route('admin.profile.index')}} @elseif(auth()->guard('accountant')->check()) {{ route('accountant.profile.index')}} @endif"><i
+                                        <li><a class="dropdown-item" href="@if(auth()->guard('doctor')->check()) {{ route('doctor.profile.index')}}@elseif(auth()->guard('accountant')->check()) {{ route('accountant.profile.index')}} @endif"><i
                                                     class="ti ti-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
 
                                         <li><a class="dropdown-item" href="index.html"><i
