@@ -44,7 +44,7 @@
                                             <td>{{ $doctor->email }}</td>
                                             <td>{{ $doctor->phone }}</td>
                                             <td>{{ $doctor->address }}</td>
-                                            <td>{{ $doctor->image }}</td>
+                                            <td><img src="{{ asset($doctor->image) }}" alt="Doctor Image" style="width: 50px; height: 50px;"></td>
                                             <td>{{ $doctor->created_at }}</td>
                                             <td>{{ $doctor->age }}</td>
                                             <td>{{ $doctor->gender }}</td>
@@ -75,7 +75,9 @@
                                         <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form id="editDoctorForm">
+                                        <form id="editDoctorForm" action="{{ route('doctor.update', $doctor->id) }}" method="POST">
+                                            @csrf
+                                            @method('PUT')
                                             <input type="hidden" id="doctor_id">
 
                                             <div class="row">
@@ -85,7 +87,7 @@
                                                         <label class="form-label">First Name <span
                                                                 class="text-red">*</span></label>
                                                         <input type="text" class="form-control" id="first_name"
-                                                            name="first_name" placeholder="Doctor's First Name">
+                                                            name="first_name" placeholder="Doctor's First Name" value="{{ $doctor->name}}">
                                                     </div>
                                                 </div>
                                                 <!-- Last Name -->
@@ -94,7 +96,7 @@
                                                         <label class="form-label">Last Name <span
                                                                 class="text-red">*</span></label>
                                                         <input type="text" class="form-control" id="last_name"
-                                                            name="last_name" placeholder="Doctor's Last Name">
+                                                            name="last_name" placeholder="Doctor's Last Name" value="{{ $doctor->name}}">
                                                     </div>
                                                 </div>
 
@@ -104,7 +106,7 @@
                                                         <label class="form-label">Email <span
                                                                 class="text-red">*</span></label>
                                                         <input type="email" class="form-control" id="email"
-                                                            name="email" placeholder="Email">
+                                                            name="email" placeholder="Email" value="{{ $doctor->email}}">
                                                     </div>
                                                 </div>
 
@@ -113,7 +115,7 @@
                                                     <div class="form-group">
                                                         <label class="form-label">Phone Number</label>
                                                         <input type="text" class="form-control" id="phone"
-                                                            name="phone" placeholder="Phone Number">
+                                                            name="phone" placeholder="Phone Number" value="{{ $doctor->phone}}">
                                                     </div>
                                                 </div>
 
@@ -122,7 +124,7 @@
                                                     <div class="form-group">
                                                         <label class="form-label">Address</label>
                                                         <input type="text" class="form-control" id="address"
-                                                            name="address" placeholder="Address">
+                                                            name="address" placeholder="Address" value="{{ $doctor->address}}">
                                                     </div>
                                                 </div>
 
@@ -132,7 +134,7 @@
                                                         <label class="form-label">Profile Picture</label>
                                                         <input type="file" class="form-control" id="image"
                                                             name="image">
-                                                        <img id="currentImage" src="" alt="Doctor Image"
+                                                        <img id="currentImage" src="{{ asset($doctor->image) }}" alt="Doctor Image"
                                                             class="mt-2" style="max-width: 150px; display: none;">
                                                     </div>
                                                 </div>
@@ -143,8 +145,8 @@
                                                         <label class="form-label">Gender</label>
                                                         <select class="form-control" id="gender" name="gender">
                                                             <option value="">Select Gender</option>
-                                                            <option value="male">Male</option>
-                                                            <option value="female">Female</option>
+                                                            <option value="male" {{ $doctor->gender == 'male' ? 'selected' : '' }}>Male</option>
+                                                            <option value="female" {{ $doctor->gender == 'female' ? 'selected' : '' }}>Female</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -154,7 +156,7 @@
                                                     <div class="form-group">
                                                         <label class="form-label">Date of Birth</label>
                                                         <input type="date" class="form-control" id="date_of_birth"
-                                                            name="date_of_birth">
+                                                            name="date_of_birth" value="{{ $doctor->date_of_birth}}">
                                                     </div>
                                                 </div>
 
@@ -163,7 +165,7 @@
                                                     <div class="form-group">
                                                         <label class="form-label">Years of Experience</label>
                                                         <input type="number" class="form-control" id="experience"
-                                                            name="experience" placeholder="Years of Experience">
+                                                            name="experience" placeholder="Years of Experience" value="{{ $doctor->experience}}">
                                                     </div>
                                                 </div>
 
@@ -172,8 +174,8 @@
                                                     <div class="form-group">
                                                         <label class="form-label">Status</label>
                                                         <select class="form-control" id="status" name="status">
-                                                            <option value="active">Active</option>
-                                                            <option value="inactive">Inactive</option>
+                                                            <option value="active" {{ $doctor->status == 'active' ? 'selected' : '' }}>Active</option>
+                                                            <option value="inactive" {{ $doctor->status == 'inactive' ? 'selected' : '' }}>Inactive</option>
                                                         </select>
                                                     </div>
                                                 </div>
