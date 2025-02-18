@@ -21,19 +21,20 @@ class ProfileRequset extends FormRequest
      */
     public function rules(): array
     {
+       
 
         return [
-            'username' => 'string|max:255',
-            'name' => 'string|max:255',
+            'username' => 'nullable|string|max:255',
+            'name' => 'nullable|string|max:255',
            // 'email' => 'email|unique:doctors,email,',
-            'phone' => 'string|max:255',
-            'address' => 'string|max:255',
-            'about' => 'string|max:1000',
-            'experience' => 'array',
-            'website' => 'string|max:255',
-            'twitter' => 'string|max:255',
-            'facebook' => 'string|max:255',
-            'linkedin' => 'string|max:255',
+            'phone' => 'nullable|string|max:255',
+            'address' => 'nullable|string|max:255',
+            'about' => 'nullable|string|max:1000',
+            'experience' => 'nullable|array',
+            'website' => 'nullable|string|max:255',
+            'twitter' => 'nullable|string|max:255',
+            'facebook' => 'nullable|string|max:255',
+            'linkedin' => 'nullable|string|max:255',
         ];
     }
 }
