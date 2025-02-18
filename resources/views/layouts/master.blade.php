@@ -10,21 +10,25 @@
     <!-- include loader.html"-->
     @include('partials.loader')
 
+
+
     <!-- PAGE -->
     <div class="page">
         <div class="page-main">
 
             <!-- include header.html"-->
             @include('partials.header')
+
+            
             <!-- include sidebar.html"-->
-            @include('partials.sidebar')
+            @yield('sidebar')
 
 
             <!--app-content open-->
-            <div class="main-content app-content mt-0">
+            <div class="mt-0 main-content app-content">
 
                 <!-- PAGE-HEADER -->
-                <div class="page-header d-flex align-items-center justify-content-between border-bottom mb-4">
+                <div class="mb-4 page-header d-flex align-items-center justify-content-between border-bottom">
                     <h1 class="page-title">Dashboard</h1>
                     <div>
                         <ol class="breadcrumb">
@@ -33,6 +37,7 @@
                         </ol>
                     </div>
                 </div>
+
                 <!-- PAGE-HEADER END -->
 
                 @yield('content')

@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\AvailableTime;
+use App\Observers\TimeSlotObserve;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        
+        AvailableTime::observe(TimeSlotObserve::class);
         //
     }
 }
