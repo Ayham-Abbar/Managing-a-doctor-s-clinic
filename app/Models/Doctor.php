@@ -9,6 +9,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Doctor extends Authenticatable
 {
     use HasFactory;
+    protected $casts = [
+        'experience' => 'array',
+    ];
 
     protected $fillable = [
         'name',
@@ -21,6 +24,16 @@ class Doctor extends Authenticatable
         'gender',
         'experience',
         'status',
+        'about',
+        'experiences',
+        'website',
+        'twitter',
+        'facebook',
+        'linkedin',
+        'username',
+
+
+
     ];
 
     protected $guard = 'doctor';
