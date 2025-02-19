@@ -785,7 +785,8 @@
                                     <ul class="pt-0 mt-1 overflow-hidden dropdown-menu dropdown-menu-end"
                                         aria-labelledby="mainHeaderProfile">
 
-                                        <li><a class="dropdown-item" href="@if(auth()->guard('doctor')->check()) {{ route('doctor.profile.index')}}@elseif(auth()->guard('accountant')->check()) {{ route('accountant.profile.index')}}  @elseif(auth()->guard('admin')->check()) {{ route('admin.profile.index')}}  @endif"><i
+
+                                        <li><a class="dropdown-item" href="#"><i
                                                     class="ti ti-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
 
                                         <li><a class="dropdown-item" href="index.html"><i
@@ -804,7 +805,7 @@
                                         <li><a class="dropdown-item" href="register.html"><i
                                                     class="ti ti-user-plus fs-18 me-2 op-7"></i>Add Another
                                                 Account</a></li>
-                                        <li><a class="dropdown-item" href="@auth('admin') {{ route('admin.logout') }} @elseif(auth('doctor')) {{ route('doctor.logout') }} @elseif(auth('accountant')) {{ route('accountant.logout') }} @endif"><i
+                                        <li><a class="dropdown-item" href="#"><i
                                                     class="ti ti-power fs-18 me-2 op-7"></i>Sign Out</a></li>
                                         <li>
                                             <hr class="my-0 dropdown-divider">

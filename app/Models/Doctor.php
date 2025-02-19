@@ -31,10 +31,7 @@ class Doctor extends Authenticatable
         'facebook',
         'linkedin',
         'username',
-       
-
-
-
+        'date_of_birth',
     ];
 
     protected $guard = 'doctor';
@@ -42,5 +39,10 @@ class Doctor extends Authenticatable
     public function availableTimes()
     {
         return $this->hasMany(AvailableTime::class);
+    }
+
+    public function specializations()
+    {
+        return $this->belongsToMany(Specialization::class);
     }
 }
