@@ -8,3 +8,5 @@ Route::get('/doctor/list', [DoctorManagementController::class, 'index'])->name('
 Route::get('/profile', [DoctorManagementController::class, 'profile'])->name('profile');
 Route::post('/doctor', [DoctorManagementController::class, 'store'])->name('doctor.store');
 Route::put('/doctor/{id}', [DoctorManagementController::class, 'update'])->name('doctor.update');
+Route::get('/doctor/{id}/edit', [DoctorManagementController::class, 'edit'])->name('doctor.edit');
+Route::delete('/doctor/{id}', [DoctorManagementController::class, 'destroy'])->name('doctor.destroy');

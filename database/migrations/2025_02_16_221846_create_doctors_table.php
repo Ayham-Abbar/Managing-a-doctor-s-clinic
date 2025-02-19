@@ -19,15 +19,16 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
+            $table->string('gender')->nullable();
             $table->string('image')->nullable();
             $table->string('linkedin')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
             $table->string('website')->nullable();
+            $table->date('date_of_birth')->nullable();
             $table->string('about')->nullable();
-            $table->json('experience')->nullable();
-
-
+            $table->string('experience')->nullable();
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

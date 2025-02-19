@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
         ]);
         Doctor::create([
             'name' => 'Doctor',
+            'username' => 'doctor',
             'email' => 'doctor@example.com',
             'password' => Hash::make('password'),
         ]);
