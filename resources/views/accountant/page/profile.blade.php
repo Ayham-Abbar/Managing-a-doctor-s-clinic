@@ -1,7 +1,7 @@
 @extends('layouts.master')
 @section('title', 'Profile')
 @section('sidebar')
-    @include('partials.sidebar')
+    @include('partials.sidebar-accountant')
 @endsection
 
 @section('content')
@@ -15,11 +15,11 @@
           <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-5">
               <div class="text-center border shadow-none card profile-cover__img">
                   <div class="card-body">
-                    <form action="{{ route('admin.profile.updateImage') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('accountant.profile.updateImage') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="profile-img-1">
 
-                            <img src="{{ asset('images/admins/' . ($admin->image ?? 'default.jpg')) }}"
+                            <img src="{{ asset('images/accountants/' . ($accountant->image ?? 'default.jpg')) }}"
                                  alt="Profile Image"
                                  id="profile-img">
 
@@ -32,7 +32,7 @@
 
                       <div class="my-2 profile-img-content text-dark">
                           <div>
-                              <h5 class="mb-0">{{ $admin->name ? $admin->name : 'No name' }}</h5>
+                              <h5 class="mb-0">{{ $accountant->name ? $accountant->name : 'No name' }}</h5>
                               <p class="mb-0 text-muted">UI Developer</p>
                           </div>
                       </div>
@@ -74,7 +74,7 @@
                           <div class="tab-pane fade show active" id="about">
                               <div class="p-5">
                                   <h5 class="text-dark">Biodata</h5>
-                                  <p class="mb-2 text-dark">{{ $admin->about }}</p>
+                                  <p class="mb-2 text-dark">{{ $accountant->about }}</p>
                               </div>
                               <div class="border-top"></div>
                               <div class="p-5">
@@ -88,7 +88,7 @@
                                       <div class="ms-3">
 
 
-                                            @foreach(json_decode($admin->experience, true) ?? [] as $experience)
+                                            @foreach(json_decode($accountant->experience, true) ?? [] as $experience)
                                             <h6 class="mb-0 text-dark fw-semibold">
                                             <li>{{ $experience }}</li>
                                         @endforeach
@@ -109,7 +109,7 @@
                                                   <span class="fw-semibold fs-14">First Name : </span>
                                               </div>
                                               <div class="col-md-9">
-                                                  <span class="fs-15">{{ $admin->name ? $admin->name : 'No name' }}</span>
+                                                  <span class="fs-15">{{ $accountant->name ? $accountant->name : 'No name' }}</span>
                                               </div>
                                           </div>
                                           <div class="mt-3 row row-sm">
@@ -129,7 +129,7 @@
                                                   <span class="fw-semibold fs-14">Email : </span>
                                               </div>
                                               <div class="col-md-9">
-                                                  <span class="fs-15 text-primary">{{ $admin->email ? $admin->email : 'No email' }}</span>
+                                                  <span class="fs-15 text-primary">{{ $accountant->email ? $accountant->email : 'No email' }}</span>
                                               </div>
                                           </div>
                                           <div class="mt-3 row row-sm">
@@ -137,7 +137,7 @@
                                                   <span class="fw-semibold fs-14">Website : </span>
                                               </div>
                                               <div class="col-md-9">
-                                                  <span class="fs-15 text-primary">{{ $admin->website ? $admin->website : 'No website' }}</span>
+                                                  <span class="fs-15 text-primary">{{ $accountant->website ? $accountant->website : 'No website' }}</span>
                                               </div>
                                           </div>
                                           <div class="mt-3 row row-sm">
@@ -145,7 +145,7 @@
                                                   <span class="fw-semibold fs-14">Address : </span>
                                               </div>
                                               <div class="col-md-9">
-                                                  <span class="fs-15">{{ $admin->address ? $admin->address : 'No address' }}</span>
+                                                  <span class="fs-15">{{ $accountant->address ? $accountant->address : 'No address' }}</span>
                                               </div>
                                           </div>
                                           <div class="mt-3 row row-sm">
@@ -153,7 +153,7 @@
                                                   <span class="fw-semibold fs-14">Phone : </span>
                                               </div>
                                               <div class="col-md-9">
-                                                  <span class="fs-15 text-primary">{{ $admin->phone ? $admin->phone : 'No phone' }}</span>
+                                                  <span class="fs-15 text-primary">{{ $accountant->phone ? $accountant->phone : 'No phone' }}</span>
                                               </div>
                                           </div>
                                       </div>
@@ -169,7 +169,7 @@
                                               <div class="media-icon bg-primary tx-fixed-white"> <i class="fe fe-github fs-20"></i> </div>
                                               <div class="media-body ms-2">
                                                   <span class="text-muted">Github</span>
-                                                  <p class="mb-0"> <a href="javascript:void(0);" class="text-dark">{{ $admin->github ? $admin->github : 'No github' }}</a> </p>
+                                                  <p class="mb-0"> <a href="javascript:void(0);" class="text-dark">{{ $accountant->github ? $accountant->github : 'No github' }}</a> </p>
                                               </div>
                                           </div>
                                       </div>
@@ -178,7 +178,7 @@
                                               <div class="media-icon bg-info tx-fixed-white"> <i class="fe fe-linkedin fs-20"></i> </div>
                                               <div class="media-body ms-2">
                                                   <span class="text-muted">Linkedin</span>
-                                                  <p class="mb-0"> <a href="javascript:void(0);" class="text-dark">{{ $admin->linkedin ? $admin->linkedin : 'No linkedin' }}</a> </p>
+                                                  <p class="mb-0"> <a href="javascript:void(0);" class="text-dark">{{ $accountant->linkedin ? $accountant->linkedin : 'No linkedin' }}</a> </p>
                                               </div>
                                           </div>
                                       </div>
@@ -187,7 +187,7 @@
                                               <div class="media-icon bg-secondary tx-fixed-white"> <i class="fe fe-instagram fs-20"></i> </div>
                                               <div class="media-body ms-2">
                                                   <span class="text-muted">Instagram</span>
-                                                  <p class="mb-0"> <a href="javascript:void(0);" class="text-dark">{{ $admin->instagram ? $admin->instagram : 'No instagram' }}</a> </p>
+                                                  <p class="mb-0"> <a href="javascript:void(0);" class="text-dark">{{ $accountant->instagram ? $accountant->instagram : 'No instagram' }}</a> </p>
                                               </div>
                                           </div>
                                       </div>
@@ -196,14 +196,14 @@
                                               <div class="media-icon bg-success tx-fixed-white"> <i class="fe fe-twitter fs-20"></i> </div>
                                               <div class="media-body ms-2">
                                                   <span class="text-muted">Twitter</span>
-                                                  <p class="mb-0"> <a href="javascript:void(0);" class="text-dark text-break">{{ $admin->twitter ? $admin->twitter : 'No twitter' }}</a> </p>
+                                                  <p class="mb-0"> <a href="javascript:void(0);" class="text-dark text-break">{{ $accountant->twitter ? $accountant->twitter : 'No twitter' }}</a> </p>
                                               </div>
                                           </div>
                                       </div>
                                   </div>
                               </div>
                           </div>
-                         <form action="{{ route('admin.profile.update') }}" method="post">
+                         <form action="{{ route('accountant.profile.update') }}" method="post">
                           @csrf
                           @method('put')
                           <div class="tab-pane fade" id="editprofile">
@@ -220,7 +220,7 @@
                                                               <label class="form-label ">User Name</label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <input type="text" class="form-control" name="username" placeholder="User Name" value="{{ $admin->username ? $admin->username : " " }}">
+                                                              <input type="text" class="form-control" name="username" placeholder="User Name" value="{{ $accountant->username ? $accountant->username : " " }}">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -230,7 +230,7 @@
                                                               <label class="form-label"> Name</label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <input type="text" name="name" class="form-control" placeholder="First Name" value="{{ $admin->name ? $admin->name : " " }}">
+                                                              <input type="text" name="name" class="form-control" placeholder="First Name" value="{{ $accountant->name ? $accountant->name : " " }}">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -254,7 +254,7 @@
                                                               <label class="form-label">Email<i>(required)</i></label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <input type="email" name="email" class="form-control" placeholder="Email" value="{{ $admin->email ? $admin->email : " " }}">
+                                                              <input type="email" name="email" class="form-control" placeholder="Email" value="{{ $accountant->email ? $accountant->email : " " }}">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -264,7 +264,7 @@
                                                               <label class="form-label">Website</label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <input type="text" name="website" class="form-control" placeholder="Website" value="{{ $admin->website ? $admin->website : " " }}">
+                                                              <input type="text" name="website" class="form-control" placeholder="Website" value="{{ $accountant->website ? $accountant->website : " " }}">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -274,7 +274,7 @@
                                                               <label class="form-label">Phone</label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <input type="text" name="phone" class="form-control" placeholder="phone number" value="{{ $admin->phone ? $admin->phone : " " }}">
+                                                              <input type="text" name="phone" class="form-control" placeholder="phone number" value="{{ $accountant->phone ? $accountant->phone : " " }}">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -284,7 +284,7 @@
                                                               <label class="form-label">Address</label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <textarea name="address" class="form-control" name="example-textarea-input" rows="2" placeholder="Address">{{ $admin->address ? $admin->address : " " }}</textarea>
+                                                              <textarea name="address" class="form-control" name="example-textarea-input" rows="2" placeholder="Address">{{ $accountant->address ? $accountant->address : " " }}</textarea>
                                                           </div>
                                                       </div>
                                                   </div>
@@ -295,7 +295,7 @@
                                                               <label class="form-label">Twitter</label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <input type="text" name="twitter" class="form-control" placeholder="twitter" value="{{ $admin->twitter ? $admin->twitter : " " }}">
+                                                              <input type="text" name="twitter" class="form-control" placeholder="twitter" value="{{ $accountant->twitter ? $accountant->twitter : " " }}">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -305,7 +305,7 @@
                                                               <label class="form-label">Facebook</label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <input type="text" name="facebook" class="form-control" placeholder="facebook" value="{{ $admin->facebook ? $admin->facebook : " " }}">
+                                                              <input type="text" name="facebook" class="form-control" placeholder="facebook" value="{{ $accountant->facebook ? $accountant->facebook : " " }}">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -315,7 +315,7 @@
                                                               <label class="form-label">Linked in</label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <input type="text" name="linkedin" class="form-control" placeholder="linkedin" value="{{ $admin->linkedin ? $admin->linkedin : " " }}">
+                                                              <input type="text" name="linkedin" class="form-control" placeholder="linkedin" value="{{ $accountant->linkedin ? $accountant->linkedin : " " }}">
                                                           </div>
                                                       </div>
                                                   </div>
@@ -326,7 +326,7 @@
                                                               <label class="form-label">Biographical Info</label>
                                                           </div>
                                                           <div class="col-md-10">
-                                                              <textarea name="about" class="form-control" name="example-textarea-input1" rows="4" placeholder="Please say something about yourself">{{ $admin->about ? $admin->about : " " }}</textarea>
+                                                              <textarea name="about" class="form-control" name="example-textarea-input1" rows="4" placeholder="Please say something about yourself">{{ $accountant->about ? $accountant->about : " " }}</textarea>
                                                           </div>
                                                       </div>
                                                   </div>

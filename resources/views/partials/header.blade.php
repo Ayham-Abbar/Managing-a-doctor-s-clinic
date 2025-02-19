@@ -785,6 +785,7 @@
                                     <ul class="pt-0 mt-1 overflow-hidden dropdown-menu dropdown-menu-end"
                                         aria-labelledby="mainHeaderProfile">
 
+
                                         <li><a class="dropdown-item" href="#"><i
                                                     class="ti ti-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
 

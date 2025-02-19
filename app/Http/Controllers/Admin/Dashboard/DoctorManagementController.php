@@ -39,7 +39,7 @@ class DoctorManagementController extends Controller
             'description' => 'nullable',
             'specializations' => 'nullable',
         ]);
-        $image = $this->uploadImage($request, 'image', 'doctors');
+        $image = $this->uploadImage($request, 'image', 'images/doctors');
         $doctor = Doctor::create([
             'name' => $request->name,
             'username' => $request->username,

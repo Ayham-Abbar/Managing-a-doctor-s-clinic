@@ -23,6 +23,13 @@ return new class extends Migration
             $table->date('date_of_birth')->nullable();
             $table->string('description')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->string('linkedin')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('website')->nullable();
+            $table->string('about')->nullable();
+            $table->json('experience')->nullable();
+            $table->string('username')->nullable();
             $table->timestamps();
         });
     }
