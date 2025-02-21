@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Dashboard\AccountantManagementController;
+use App\Http\Controllers\Admin\Dashboard\AvailableTimeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\DoctorManagementController;
 use App\Http\Controllers\Admin\Dashboard\SpecializationManagementController;
@@ -41,3 +42,10 @@ Route::post('/patient',[PatientManagementController::class,'store'])->name('pati
 Route::get('/patient/{id}/edit',[PatientManagementController::class,'edit'])->name('patient.edit');
 Route::put('/patient/{id}',[PatientManagementController::class,'update'])->name('patient.update');
 Route::delete('/patient/{id}',[PatientManagementController::class,'destroy'])->name('patient.destroy');
+//AvailableTime
+Route::get('/available-time',[AvailableTimeController::class,'index'])->name('available-time.index');
+Route::get('/available-time/create',[AvailableTimeController::class,'create'])->name('available-time.create');
+Route::post('/available-time',[AvailableTimeController::class,'store'])->name('available-time.store');
+Route::get('/available-time/{id}/edit',[AvailableTimeController::class,'edit'])->name('available-time.edit');
+Route::put('/available-time/{id}',[AvailableTimeController::class,'update'])->name('available-time.update');
+Route::delete('/available-time/{id}',[AvailableTimeController::class,'destroy'])->name('available-time.destroy');

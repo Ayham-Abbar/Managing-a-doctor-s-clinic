@@ -14,8 +14,6 @@ class AvailableTimeController extends Controller
     public function index(){
         $doctor = auth()->guard('doctor')->user();
         $avaliableTimes = $doctor->availableTimes;
-
-
         return view('doctor.available-times.index',compact('avaliableTimes'));
     }
 

@@ -165,7 +165,7 @@
                              <a href="javascript:void(0);">Appointments Management</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">📅 Schedule Appointment</a>
+                             <a href="{{route('available-time.index')}}" class="side-menu__item">📅Available Time</a>
                          </li>
                          <li class="slide">
                              <a href="#" class="side-menu__item">📋 All Appointments</a>
