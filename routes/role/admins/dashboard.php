@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\DoctorManagementController;
 use App\Http\Controllers\Admin\Dashboard\SpecializationManagementController;
 use App\Http\Controllers\Admin\profileController;
+use App\Http\Controllers\Admin\Dashboard\PatientManagementController;
 //doctor
 Route::get('/doctor', [DoctorManagementController::class, 'create'])->name('doctor.create');
 Route::get('/doctor/list', [DoctorManagementController::class, 'index'])->name('doctor.index');
@@ -33,3 +34,10 @@ Route::post('/accountant',[AccountantManagementController::class,'store'])->name
 Route::get('/accountant/{id}/edit',[AccountantManagementController::class,'edit'])->name('accountant.edit');
 Route::put('/accountant/{id}',[AccountantManagementController::class,'update'])->name('accountant.update');
 Route::delete('/accountant/{id}',[AccountantManagementController::class,'destroy'])->name('accountant.destroy');
+//Patient
+Route::get('/patient',[PatientManagementController::class,'index'])->name('patient.index');
+Route::get('/patient/create',[PatientManagementController::class,'create'])->name('patient.create');
+Route::post('/patient',[PatientManagementController::class,'store'])->name('patient.store');
+Route::get('/patient/{id}/edit',[PatientManagementController::class,'edit'])->name('patient.edit');
+Route::put('/patient/{id}',[PatientManagementController::class,'update'])->name('patient.update');
+Route::delete('/patient/{id}',[PatientManagementController::class,'destroy'])->name('patient.destroy');

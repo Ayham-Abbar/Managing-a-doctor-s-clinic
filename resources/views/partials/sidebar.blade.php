@@ -140,10 +140,10 @@
                              <a href="javascript:void(0);">Patient Management</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">Add Patient</a>
+                             <a href="{{route('patient.create')}}" class="side-menu__item">Add Patient</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">Patient List</a>
+                             <a href="{{route('patient.index')}}" class="side-menu__item">Patient List</a>
                          </li>
                      </ul>
                  </li>
