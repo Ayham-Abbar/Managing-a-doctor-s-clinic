@@ -89,10 +89,10 @@
                              <a href="javascript:void(0);">Specializations</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">Add Specialization</a>
+                             <a href="{{ route('specialization.create') }}" class="side-menu__item">Add Specialization</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">Specializations List</a>
+                             <a href="{{ route('specialization.index') }}" class="side-menu__item">Specializations List</a>
                          </li>
 
 
