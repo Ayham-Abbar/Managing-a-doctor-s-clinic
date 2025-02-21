@@ -234,6 +234,43 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="slide has-sub">
+                        <a href="javascript:void(0);" class="side-menu__item">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM5 20V9h14v11H5z" />
+                            </svg>
+
+                            <span class="side-menu__label">Appointments Management</span>
+                            <i class="fe fe-chevron-right side-menu__angle"></i>
+                        </a>
+                        <ul class="slide-menu child1">
+                            <li class="slide side-menu__label1">
+                                <a href="javascript:void(0);">Appointments Management</a>
+                            </li>
+                            {{-- <li class="slide">
+                                <a href="{{route('available-time.index')}}" class="side-menu__item">📅Available Time</a>
+                            </li> --}}
+                            <li class="slide">
+                                <a href="{{route('doctor.appointments.all')}}" class="side-menu__item">📋 All Appointments</a>
+                            </li>
+                            <li class="slide">
+                                <a href="{{route('doctor.appointments.completed')}}" class="side-menu__item"> Completed Appointments</a>
+                            </li>
+                            {{-- <li class="slide">
+                                <a href="#" class="side-menu__item">✅ Completed Appointments</a>
+                            </li> --}}
+                            <li class="slide">
+                                <a href="{{route('doctor.appointments.canceled')}}" class="side-menu__item">🚫 Canceled Appointments</a>
+                            </li>
+                            <li class="slide">
+                                <a href="#" class="side-menu__item">⚠️ No-Show Appointments</a>
+                            </li>
+                        </ul>
+                    </li>
+
+
 
                  <!-- End::slide -->
 
