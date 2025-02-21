@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class TimeSolt extends Model
 {
+    protected $table = 'time_slots';
     use HasFactory;
     protected $fillable = [
         'available_time_id',
@@ -19,5 +20,10 @@ class TimeSolt extends Model
     public function availableTime()
     {
         return $this->belongsTo(AvailableTime::class);
+    }
+
+    public function appointments()
+    {
+        return $this->hasMany(Appointment::class);
     }
 }
