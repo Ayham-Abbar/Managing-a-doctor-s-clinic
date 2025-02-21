@@ -115,10 +115,10 @@
                              <a href="javascript:void(0);">Accountant Management</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">Add Accountant</a>
+                             <a href="{{route('accountant.create')}}" class="side-menu__item">Add Accountant</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">Accountant List</a>
+                             <a href="{{ route('accountant.index') }}" class="side-menu__item">Accountant List</a>
                          </li>
                      </ul>
                  </li>
