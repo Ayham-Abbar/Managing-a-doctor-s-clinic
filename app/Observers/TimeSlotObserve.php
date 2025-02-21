@@ -37,7 +37,7 @@ class TimeSlotObserve
                 'date' => $date->toDateString(),
                 'status' => 'available',
             ]);
-        
+
 
             $startTime->addMinutes($available_time->duration);
         }
