@@ -69,8 +69,8 @@ class AuthController extends Controller
         return redirect()->intended(RouteServiceProvider::DOCTOR_HOME);
     }
 
-    public function dashboard()
-    {
-        return view('doctor.page.dashboard');
-    }
+    // public function dashboard()
+    // {
+    //     return view('doctor.page.dashboard');
+    // }
 }
