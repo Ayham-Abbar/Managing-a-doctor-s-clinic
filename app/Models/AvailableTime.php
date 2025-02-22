@@ -9,6 +9,7 @@ class AvailableTime extends Model
 {
     use HasFactory;
 
+    protected $table = 'available_times';
     protected $fillable = [
         'doctor_id',
         'day',

@@ -19,8 +19,6 @@ return new class extends Migration
             $table->foreignId('doctor_id')->constrained('doctors')->onDelete('cascade');
             //الموعد
             $table->foreignId('time_slot_id')->constrained('time_slots')->onDelete('cascade');
-            //تاريخ الموعد
-            $table->date('date');
             //حالة الموعد
             $table->enum('status', ['pending', 'confirmed', 'cancelled'])->default('pending');
             //سبب الالغاء

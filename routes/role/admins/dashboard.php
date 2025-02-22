@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Dashboard\AccountantManagementController;
+use App\Http\Controllers\Admin\Dashboard\AppointmentController;
 use App\Http\Controllers\Admin\Dashboard\AvailableTimeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Dashboard\DoctorManagementController;
@@ -49,3 +50,9 @@ Route::post('/available-time',[AvailableTimeController::class,'store'])->name('a
 Route::get('/available-time/{id}/edit',[AvailableTimeController::class,'edit'])->name('available-time.edit');
 Route::put('/available-time/{id}',[AvailableTimeController::class,'update'])->name('available-time.update');
 Route::delete('/available-time/{id}',[AvailableTimeController::class,'destroy'])->name('available-time.destroy');
+//Appointment
+Route::get('/appointments',[AppointmentController::class,'index'])->name('appointments.index');
+Route::get('/appointments/upcoming',[AppointmentController::class,'upcoming'])->name('appointments.upcoming');
+Route::get('/appointments/completed',[AppointmentController::class,'completed'])->name('appointments.completed');
+Route::get('/appointments/canceled',[AppointmentController::class,'canceled'])->name('appointments.canceled');
+Route::get('/appointments/clear-all',[AppointmentController::class,'clearAll'])->name('appointments.clearAll');

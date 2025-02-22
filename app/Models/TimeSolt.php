@@ -19,7 +19,7 @@ class TimeSolt extends Model
 
     public function availableTime()
     {
-        return $this->belongsTo(AvailableTime::class);
+        return $this->belongsTo(AvailableTime::class,'available_time_id');
     }
 
     public function appointments()

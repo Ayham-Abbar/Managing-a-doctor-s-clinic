@@ -89,10 +89,12 @@
                              <a href="javascript:void(0);">Specializations</a>
                          </li>
                          <li class="slide">
-                             <a href="{{ route('specialization.create') }}" class="side-menu__item">Add Specialization</a>
+                             <a href="{{ route('specialization.create') }}" class="side-menu__item">Add
+                                 Specialization</a>
                          </li>
                          <li class="slide">
-                             <a href="{{ route('specialization.index') }}" class="side-menu__item">Specializations List</a>
+                             <a href="{{ route('specialization.index') }}" class="side-menu__item">Specializations
+                                 List</a>
                          </li>
 
 
@@ -115,7 +117,7 @@
                              <a href="javascript:void(0);">Accountant Management</a>
                          </li>
                          <li class="slide">
-                             <a href="{{route('accountant.create')}}" class="side-menu__item">Add Accountant</a>
+                             <a href="{{ route('accountant.create') }}" class="side-menu__item">Add Accountant</a>
                          </li>
                          <li class="slide">
                              <a href="{{ route('accountant.index') }}" class="side-menu__item">Accountant List</a>
@@ -140,15 +142,28 @@
                              <a href="javascript:void(0);">Patient Management</a>
                          </li>
                          <li class="slide">
-                             <a href="{{route('patient.create')}}" class="side-menu__item">Add Patient</a>
+                             <a href="{{ route('patient.create') }}" class="side-menu__item">Add Patient</a>
                          </li>
                          <li class="slide">
-                             <a href="{{route('patient.index')}}" class="side-menu__item">Patient List</a>
+                             <a href="{{ route('patient.index') }}" class="side-menu__item">Patient List</a>
                          </li>
                      </ul>
                  </li>
-                 <!-- End::slide -->
-                 <!-- Start::slide -->
+                 <!-- Start::Available Time -->
+                 <li class="slide">
+                     <a href="{{ route('available-time.index') }}" class="side-menu__item">
+                         <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24"
+                             fill="#000000">
+                             <path d="M0 0h24v24H0z" fill="none" />
+                             <path
+                                 d="M12 4a8 8 0 1 1 0 16A8 8 0 0 1 12 4m0-2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 5h-2v6l5 3 1-1.73-4-2.27V7z" />
+                         </svg>
+
+                         <span class="side-menu__label">Available Time</span>
+                     </a>
+                 </li>
+                 <!-- End::Available Time -->
+                 <!-- Start::Appointments Management -->
                  <li class="slide has-sub">
                      <a href="javascript:void(0);" class="side-menu__item">
                          <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24"
@@ -160,31 +175,33 @@
                          <span class="side-menu__label">Appointments Management</span>
                          <i class="fe fe-chevron-right side-menu__angle"></i>
                      </a>
+
                      <ul class="slide-menu child1">
                          <li class="slide side-menu__label1">
                              <a href="javascript:void(0);">Appointments Management</a>
                          </li>
                          <li class="slide">
-                             <a href="{{route('available-time.index')}}" class="side-menu__item">📅Available Time</a>
+                             <a href="{{ route('appointments.index') }}" class="side-menu__item">📋 All
+                                 Appointments</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">📋 All Appointments</a>
+                             <a href="{{ route('appointments.upcoming') }}" class="side-menu__item">⏳ Upcoming
+                                 Appointments</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">⏳ Upcoming Appointments</a>
+                             <a href="{{ route('appointments.completed') }}" class="side-menu__item">✅ Completed
+                                 Appointments</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">✅ Completed Appointments</a>
-                         </li>
-                         <li class="slide">
-                             <a href="#" class="side-menu__item">🚫 Canceled Appointments</a>
+                             <a href="{{ route('appointments.canceled') }}" class="side-menu__item">🚫 Canceled
+                                 Appointments</a>
                          </li>
                          <li class="slide">
                              <a href="#" class="side-menu__item">⚠️ No-Show Appointments</a>
                          </li>
                      </ul>
                  </li>
-                 <!-- End::slide -->
+                 <!-- End::Appointments Management -->
                  <!-- Start::slide -->
                  <li class="slide has-sub">
                      <a href="javascript:void(0);" class="side-menu__item">
@@ -287,10 +304,12 @@
                  <!-- Start::slide -->
                  <li class="slide has-sub">
                      <a href="javascript:void(0);" class="side-menu__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M19.14 12.94l1.43-1.43c.39-.39.39-1.02 0-1.41l-1.43-1.43c.06-.47.06-.96 0-1.44l1.43-1.43c.39-.39.39-1.02 0-1.41l-1.43-1.43c-.15-.47-.41-.91-.72-1.32l1.05-1.05c.39-.39.39-1.02 0-1.41l-1.42-1.42c-.39-.39-1.02-.39-1.41 0l-1.05 1.05c-.41-.31-.85-.57-1.32-.72l-1.43-1.43c-.39-.39-1.02-.39-1.41 0l-1.43 1.43c-.47.15-.91.41-1.32.72l-1.05-1.05c-.39-.39-1.02-.39-1.41 0l-1.42 1.42c-.39.39-.39 1.02 0 1.41l1.05 1.05c-.31.41-.57.85-.72 1.32l-1.43 1.43c-.39.39-.39 1.02 0 1.41l1.43 1.43c-.06.47-.06.96 0 1.44l-1.43 1.43c-.39.39-.39 1.02 0 1.41l1.43 1.43c.15.47.41.91.72 1.32l-1.05 1.05c-.39.39-.39 1.02 0 1.41l1.42 1.42c.39.39 1.02.39 1.41 0l1.05-1.05c.41.31.85.57 1.32.72l1.43 1.43c.39.39 1.02.39 1.41 0l1.43-1.43c.47-.15.91-.41 1.32-.72l1.05 1.05c.39.39 1.02.39 1.41 0l1.42-1.42c.39-.39.39-1.02 0-1.41l-1.05-1.05c.31-.41.57-.85.72-1.32zm-7.14 2.06c-2.41 0-4.35-1.94-4.35-4.35s1.94-4.35 4.35-4.35 4.35 1.94 4.35 4.35-1.94 4.35-4.35 4.35z"/>
-                        </svg>
-                        
+                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24"
+                             fill="currentColor">
+                             <path
+                                 d="M19.14 12.94l1.43-1.43c.39-.39.39-1.02 0-1.41l-1.43-1.43c.06-.47.06-.96 0-1.44l1.43-1.43c.39-.39.39-1.02 0-1.41l-1.43-1.43c-.15-.47-.41-.91-.72-1.32l1.05-1.05c.39-.39.39-1.02 0-1.41l-1.42-1.42c-.39-.39-1.02-.39-1.41 0l-1.05 1.05c-.41-.31-.85-.57-1.32-.72l-1.43-1.43c-.39-.39-1.02-.39-1.41 0l-1.43 1.43c-.47.15-.91.41-1.32.72l-1.05-1.05c-.39-.39-1.02-.39-1.41 0l-1.42 1.42c-.39.39-.39 1.02 0 1.41l1.05 1.05c-.31.41-.57.85-.72 1.32l-1.43 1.43c-.39.39-.39 1.02 0 1.41l1.43 1.43c-.06.47-.06.96 0 1.44l-1.43 1.43c-.39.39-.39 1.02 0 1.41l1.43 1.43c.15.47.41.91.72 1.32l-1.05 1.05c-.39.39-.39 1.02 0 1.41l1.42 1.42c.39.39 1.02.39 1.41 0l1.05-1.05c.41.31.85.57 1.32.72l1.43 1.43c.39.39 1.02.39 1.41 0l1.43-1.43c.47-.15.91-.41 1.32-.72l1.05 1.05c.39.39 1.02.39 1.41 0l1.42-1.42c.39-.39.39-1.02 0-1.41l-1.05-1.05c.31-.41.57-.85.72-1.32zm-7.14 2.06c-2.41 0-4.35-1.94-4.35-4.35s1.94-4.35 4.35-4.35 4.35 1.94 4.35 4.35-1.94 4.35-4.35 4.35z" />
+                         </svg>
+
 
                          <span class="side-menu__label">System Settings</span>
                          <i class="fe fe-chevron-right side-menu__angle"></i>
@@ -318,10 +337,12 @@
                  <!-- Start::slide -->
                  <li class="slide has-sub">
                      <a href="javascript:void(0);" class="side-menu__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C9.79 2 8 3.79 8 6V12C8 14.21 9.79 16 12 16C14.21 16 16 14.21 16 12V6C16 3.79 14.21 2 12 2ZM12 14C10.9 14 10 13.1 10 12V6C10 4.9 10.9 4 12 4C13.1 4 14 4.9 14 6V12C14 13.1 13.1 14 12 14ZM19 17H5V18C5 18.55 5.45 19 6 19H18C18.55 19 19 18.55 19 18V17Z"/>
-                        </svg>
-                        
+                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 24 24"
+                             fill="currentColor">
+                             <path
+                                 d="M12 2C9.79 2 8 3.79 8 6V12C8 14.21 9.79 16 12 16C14.21 16 16 14.21 16 12V6C16 3.79 14.21 2 12 2ZM12 14C10.9 14 10 13.1 10 12V6C10 4.9 10.9 4 12 4C13.1 4 14 4.9 14 6V12C14 13.1 13.1 14 12 14ZM19 17H5V18C5 18.55 5.45 19 6 19H18C18.55 19 19 18.55 19 18V17Z" />
+                         </svg>
+
                          <span class="side-menu__label">Notifications & Alerts</span>
                          <i class="fe fe-chevron-right side-menu__angle"></i>
                      </a>

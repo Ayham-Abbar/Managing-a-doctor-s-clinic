@@ -39,7 +39,7 @@
                 </div>
 
                 <!-- PAGE-HEADER END -->
-
+                @include('partials.handeling-error')
                 @yield('content')
             </div>
             <!--app-content close-->

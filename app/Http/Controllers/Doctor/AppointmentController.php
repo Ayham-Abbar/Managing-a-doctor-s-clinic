@@ -13,10 +13,7 @@ class AppointmentController extends Controller
         $appointments = Appointment::where('doctor_id', auth()->guard('doctor')->user()->id)
             ->where('status', 'confirmed')
             ->with('timeSlot','user')
-            ->get();
-
-
-
+            ->get();    
         return view('doctor.appointments.allAppointment', compact('appointments'));
     }
     public function getAllcancelAppointment(){
