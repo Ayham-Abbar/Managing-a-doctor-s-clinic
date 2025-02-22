@@ -12,7 +12,7 @@ Route::middleware(['guest:doctor'])->prefix('doctor')->group(function () {
 
 Route::middleware(['doctor'])->prefix('doctor')->group(function () {
     Route::get('logout', [AuthController::class, 'logout'])->name('doctor.logout');
-    Route::get('dashboard', [AuthController::class, 'dashboard'])->name('doctor.dashboard');
+   // Route::get('dashboard', [AuthController::class, 'dashboard'])->name('doctor.dashboard');
 });
 
 
