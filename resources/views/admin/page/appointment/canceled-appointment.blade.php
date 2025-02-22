@@ -13,14 +13,14 @@
 
 @section('content')
     <div class="row">
-        
-        
+
+
         <div class="col-xl-12">
-            
+
             <div class="card custom-card">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h5 class="card-title">Canceled Appointments</h5>
-                    <a href="{{route('appointments.clearAll')}}" class="btn btn-danger">Clear All</a>
+                    <a href="{{ route('appointments.clearAll') }}" class="btn btn-danger">Clear All</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -39,11 +39,14 @@
                                 @foreach ($appointments as $index => $appointment)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
-                                        <td>{{ $appointment->user->name }}</td>
-                                        <td>{{ $appointment->doctor->name }}</td>
-                                        <td>{{ $appointment->timeSlot->start_time }}</td>
-                                        <td>{{ $appointment->timeSlot->date }}</td>
-                                        <td class="text-center" style="color: {{ $appointment->status == 'pending' ? 'orange' : ($appointment->status == 'confirmed' ? 'green' : 'red') }};">{{ ucfirst($appointment->status) }}</td>
+                                        <td>{{ optional($appointment->user)->name }}</td>
+                                        <td>{{ optional($appointment->doctor)->name }}</td>
+                                        <td>{{ optional($appointment->timeSlot)->start_time }}</td>
+                                        <td>{{ optional($appointment->timeSlot)->date }}</td>
+
+                                        <td class="text-center"
+                                            style="color: {{ $appointment->status == 'pending' ? 'orange' : ($appointment->status == 'confirmed' ? 'green' : 'red') }};">
+                                            {{ ucfirst($appointment->status) }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

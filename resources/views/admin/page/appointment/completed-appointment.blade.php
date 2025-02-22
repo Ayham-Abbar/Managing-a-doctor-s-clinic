@@ -35,10 +35,10 @@
                                 @foreach ($appointments as $index => $appointment)
                                     <tr>
                                         <td>{{ $index + 1 }}</td>
-                                        <td>{{ $appointment->user->name }}</td>
-                                        <td>{{ $appointment->doctor->name }}</td>
-                                        <td>{{ $appointment->timeSlot->start_time }}</td>
-                                        <td>{{ $appointment->timeSlot->date }}</td>
+                                        <td>{{ optional($appointment->user)->name }}</td>
+                                        <td>{{ optional($appointment->doctor)->name }}</td>
+                                        <td>{{ optional($appointment->timeSlot)->start_time }}</td>
+                                        <td>{{ optional($appointment->timeSlot)->date }}</td>
                                         <td class="text-center" style="color: {{ $appointment->status == 'pending' ? 'orange' : ($appointment->status == 'confirmed' ? 'green' : 'red') }};">{{ ucfirst($appointment->status) }}</td>
                                     </tr>
                                 @endforeach
