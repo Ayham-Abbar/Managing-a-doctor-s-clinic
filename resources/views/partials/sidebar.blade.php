@@ -319,7 +319,7 @@
                              <a href="javascript:void(0);">System Settings</a>
                          </li>
                          <li class="slide">
-                             <a href="#" class="side-menu__item">🏥 Clinic Settings</a>
+                             <a href="{{ route('settings.index') }}" class="side-menu__item">🏥 Clinic Settings</a>
                          </li>
                          <li class="slide">
                              <a href="#" class="side-menu__item">📧 Email & Notifications Settings</a>

@@ -8,6 +8,8 @@ use App\Http\Controllers\Admin\Dashboard\DoctorManagementController;
 use App\Http\Controllers\Admin\Dashboard\SpecializationManagementController;
 use App\Http\Controllers\Admin\profileController;
 use App\Http\Controllers\Admin\Dashboard\PatientManagementController;
+use App\Http\Controllers\Admin\Dashboard\SystemSettingsController;
+
 //doctor
 Route::get('/doctor', [DoctorManagementController::class, 'create'])->name('doctor.create');
 Route::get('/doctor/list', [DoctorManagementController::class, 'index'])->name('doctor.index');
@@ -56,3 +58,6 @@ Route::get('/appointments/upcoming',[AppointmentController::class,'upcoming'])->
 Route::get('/appointments/completed',[AppointmentController::class,'completed'])->name('appointments.completed');
 Route::get('/appointments/canceled',[AppointmentController::class,'canceled'])->name('appointments.canceled');
 Route::get('/appointments/clear-all',[AppointmentController::class,'clearAll'])->name('appointments.clearAll');
+//System Settings
+Route::get('/settings',[SystemSettingsController::class,'index'])->name('settings.index');
+Route::post('/settings/update',[SystemSettingsController::class,'update'])->name('settings.update');
