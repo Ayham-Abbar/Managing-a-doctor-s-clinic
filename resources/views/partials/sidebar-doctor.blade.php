@@ -30,7 +30,7 @@
 
                 <!-- Start::slide -->
                 <li class="slide">
-                    <a href="index.html" class="side-menu__item">
+                    <a href="{{ route('doctor.dashboard.index') }}" class="side-menu__item">
                         <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" height="24px"
                             viewBox="0 0 24 24" width="24px" fill="#000000">
                             <path d="M0 0h24v24H0V0z" fill="none" />
@@ -46,113 +46,75 @@
                 <li class="slide__category"><span class="category-name">PAGES</span></li>
                 <!-- End::slide__category -->
 
-                <!-- Start::slide -->
-                <li class="slide has-sub">
-                    <a href="javascript:void(0);" class="side-menu__item">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="side-menu__icon">
-                            <path d="M0 0h24v24H0V0z" fill="none"></path>
-                            <path
-                                d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16zm0-11.47L17.74 9 12 13.47 6.26 9 12 4.53z">
-                            </path>
-                        </svg>
-                        <span class="side-menu__label">Pages</span>
-                        <i class="fe fe-chevron-right side-menu__angle"></i>
-                    </a>
-                    <ul class="slide-menu child1">
-                        <li class="slide side-menu__label1">
-                            <a href="javascript:void(0);">Pages</a>
-                        </li>
-                        <li class="slide">
-                            <a href="profile.html" class="side-menu__item">Profile</a>
-                        </li>
-                        <li class="slide">
-                            <a href="notify-list.html" class="side-menu__item">Notification List</a>
-                        </li>
-                        <li class="slide">
-                            <a href="email-inbox.html" class="side-menu__item">Mail-Inbox</a>
-                        </li>
-                        <li class="slide">
-                            <a href="gallery.html" class="side-menu__item">Gallery</a>
-                        </li>
-                        <li class="slide has-sub">
-                            <a href="javascript:void(0);" class="side-menu__item">Extension
-                                <i class="fe fe-chevron-right side-menu__angle"></i></a>
-                            <ul class="slide-menu child2">
-                                <li class="slide">
-                                    <a href="about.html" class="side-menu__item">About Company</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="faq.html" class="side-menu__item">FAQS</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="terms.html" class="side-menu__item">Terms</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="invoice.html" class="side-menu__item">Invoice</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="pricing.html" class="side-menu__item">Pricing Tables</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="settings.html" class="side-menu__item">Settings</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="blog.html" class="side-menu__item">Blog</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="blog-details.html" class="side-menu__item">Blog Details</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="blog-post.html" class="side-menu__item">Blog Post</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="empty.html" class="side-menu__item">Empty Page</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="slide has-sub">
-                            <a href="javascript:void(0);" class="side-menu__item">File Manager
-                                <i class="fe fe-chevron-right side-menu__angle"></i></a>
-                            <ul class="slide-menu child2">
-                                <li class="slide">
-                                    <a href="file-manager.html" class="side-menu__item">File Manager</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="filemanager-list.html" class="side-menu__item">File Manager
-                                        List</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="slide has-sub">
-                            <a href="javascript:void(0);" class="side-menu__item">Ecommerce
-                                <i class="fe fe-chevron-right side-menu__angle"></i></a>
-                            <ul class="slide-menu child2">
-                                <li class="slide">
-                                    <a href="shop.html" class="side-menu__item">Shop</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="shop-description.html" class="side-menu__item">Product
-                                        Details</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="cart.html" class="side-menu__item">Shopping Cart</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="add-product.html" class="side-menu__item">Add Product</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="wishlist.html" class="side-menu__item">Wishlist</a>
-                                </li>
-                                <li class="slide">
-                                    <a href="checkout.html" class="side-menu__item">Checkout</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
+              <!-- Start::slide -->
+<li class="slide has-sub">
+    <a href="javascript:void(0);" class="side-menu__item">
+        <!-- 👇 أيقونة جديدة تمثل المرضى -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a4 4 0 00-5-4m-4 6v-2a4 4 0 00-5-4m9-2a4 4 0 100-8 4 4 0 000 8zm-9 0a4 4 0 100-8 4 4 0 000 8z" />
+        </svg>
+        <span class="side-menu__label">Patient Management</span>
+        <i class="fe fe-chevron-right side-menu__angle"></i>
+    </a>
+    <ul class="slide-menu child1">
+        <li class="slide side-menu__label1">
+            <a href="javascript:void(0);">Patient Management</a>
+        </li>
+        <li class="slide">
+            <a href="{{ route('doctor.patients.index') }}" class="side-menu__item">Patients View</a>
+        </li>
+        <li class="slide">
+            <a href="{{ route('doctor.patients.create') }}" class="side-menu__item">Patient Create</a>
+        </li>
+        <li class="slide">
+            <a href="email-inbox.html" class="side-menu__item">Mail-Inbox</a>
+        </li>
+        <li class="slide">
+            <a href="gallery.html" class="side-menu__item">Gallery</a>
+        </li>
+        <li class="slide has-sub">
+            <a href="javascript:void(0);" class="side-menu__item">Extension
+                <i class="fe fe-chevron-right side-menu__angle"></i></a>
+            <ul class="slide-menu child2">
+                <li class="slide"><a href="about.html" class="side-menu__item">About Company</a></li>
+                <li class="slide"><a href="faq.html" class="side-menu__item">FAQS</a></li>
+                <li class="slide"><a href="terms.html" class="side-menu__item">Terms</a></li>
+                <li class="slide"><a href="invoice.html" class="side-menu__item">Invoice</a></li>
+                <li class="slide"><a href="pricing.html" class="side-menu__item">Pricing Tables</a></li>
+                <li class="slide"><a href="settings.html" class="side-menu__item">Settings</a></li>
+                <li class="slide"><a href="blog.html" class="side-menu__item">Blog</a></li>
+                <li class="slide"><a href="blog-details.html" class="side-menu__item">Blog Details</a></li>
+                <li class="slide"><a href="blog-post.html" class="side-menu__item">Blog Post</a></li>
+                <li class="slide"><a href="empty.html" class="side-menu__item">Empty Page</a></li>
+            </ul>
+        </li>
+        <li class="slide has-sub">
+            <a href="javascript:void(0);" class="side-menu__item">File Manager
+                <i class="fe fe-chevron-right side-menu__angle"></i></a>
+            <ul class="slide-menu child2">
+                <li class="slide"><a href="file-manager.html" class="side-menu__item">File Manager</a></li>
+                <li class="slide"><a href="filemanager-list.html" class="side-menu__item">File Manager List</a></li>
+            </ul>
+        </li>
+        <li class="slide has-sub">
+            <a href="javascript:void(0);" class="side-menu__item">Ecommerce
+                <i class="fe fe-chevron-right side-menu__angle"></i></a>
+            <ul class="slide-menu child2">
+                <li class="slide"><a href="shop.html" class="side-menu__item">Shop</a></li>
+                <li class="slide"><a href="shop-description.html" class="side-menu__item">Product Details</a></li>
+                <li class="slide"><a href="cart.html" class="side-menu__item">Shopping Cart</a></li>
+                <li class="slide"><a href="add-product.html" class="side-menu__item">Add Product</a></li>
+                <li class="slide"><a href="wishlist.html" class="side-menu__item">Wishlist</a></li>
+                <li class="slide"><a href="checkout.html" class="side-menu__item">Checkout</a></li>
+            </ul>
+        </li>
+    </ul>
+</li>
+
                 <!-- End::slide -->
 
-                <!-- Start::slide -->
+                {{-- <!-- Start::slide -->
                 <li class="slide has-sub">
                     <a href="javascript:void(0);" class="side-menu__item">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24"
@@ -208,7 +170,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <!-- End::slide -->
 
 
@@ -230,7 +192,7 @@
                                 <a href="{{ route('doctor.available-time.create') }}" class="side-menu__item">Create</a>
                             </li>
                             <li class="slide">
-                                <a href="{{ route('doctor.available-time.index') }}" class="side-menu__item">Index</a>
+                                <a href="{{ route('doctor.available-time.index') }}" class="side-menu__item">Available time view</a>
                             </li>
                         </ul>
                     </li>
@@ -253,7 +215,7 @@
                                 <a href="{{route('available-time.index')}}" class="side-menu__item">📅Available Time</a>
                             </li> --}}
                             <li class="slide">
-                                <a href="{{route('doctor.appointments.all')}}" class="side-menu__item">📋 All Appointments</a>
+                                <a href="{{route('doctor.appointments.all')}}" class="side-menu__item">📋  Appointments Daily</a>
                             </li>
                             <li class="slide">
                                 <a href="{{route('doctor.appointments.completed')}}" class="side-menu__item"> Completed Appointments</a>
@@ -265,9 +227,13 @@
                                 <a href="{{route('doctor.appointments.canceled')}}" class="side-menu__item">🚫 Canceled Appointments</a>
                             </li>
                             <li class="slide">
+                                <a href="{{route('doctor.appointments.create')}}" class="side-menu__item"> Create Appointments</a>
+                            </li>
+                            <li class="slide">
                                 <a href="#" class="side-menu__item">⚠️ No-Show Appointments</a>
                             </li>
                         </ul>
+
                     </li>
 
 
@@ -547,7 +513,7 @@
                                 d="M11 7h6v2h-6zm0 4h6v2h-6zm0 4h6v2h-6zM7 7h2v2H7zm0 4h2v2H7zm0 4h2v2H7zM20.1 3H3.9c-.5 0-.9.4-.9.9v16.2c0 .4.4.9.9.9h16.2c.4 0 .9-.5.9-.9V3.9c0-.5-.5-.9-.9-.9zM19 19H5V5h14v14z">
                             </path>
                         </svg>
-                        <span class="side-menu__label">Nested Menu</span>
+                        <span class="side-menu__label">Patien</span>
                         <i class="fe fe-chevron-right side-menu__angle"></i>
                     </a>
                     <ul class="slide-menu child1">

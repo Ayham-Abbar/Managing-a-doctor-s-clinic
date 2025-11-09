@@ -50,4 +50,16 @@ class Doctor extends Authenticatable
     {
         return $this->hasMany(Appointment::class);
     }
+    public function patients()
+{
+    return $this->hasManyThrough(
+        User::class,
+        Appointment::class,
+        'doctor_id',
+        'id',
+        'id',
+        'user_id'
+    );
+}
+
 }

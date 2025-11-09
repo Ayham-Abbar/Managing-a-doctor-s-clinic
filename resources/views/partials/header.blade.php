@@ -786,7 +786,7 @@
                                         aria-labelledby="mainHeaderProfile">
 
 
-                                        <li><a class="dropdown-item" href="#"><i
+                                        <li><a class="dropdown-item" href="{{ Auth::guard('doctor')->check() ? route('doctor.profile.index') : (Auth::guard('admin')->check() ? route('admin.profile.index') : '#') }}"><i
                                                     class="ti ti-user-circle fs-18 me-2 op-7"></i>Profile</a></li>
 
                                         <li><a class="dropdown-item" href="index.html"><i
@@ -805,7 +805,7 @@
                                         <li><a class="dropdown-item" href="register.html"><i
                                                     class="ti ti-user-plus fs-18 me-2 op-7"></i>Add Another
                                                 Account</a></li>
-                                        <li><a class="dropdown-item" href="#"><i
+                                        <li><a class="dropdown-item" href="{{ Auth::guard('doctor')->check() ? route('doctor.logout') : (Auth::guard('admin')->check() ? route('admin.logout') : '#') }}"><i
                                                     class="ti ti-power fs-18 me-2 op-7"></i>Sign Out</a></li>
                                         <li>
                                             <hr class="my-0 dropdown-divider">

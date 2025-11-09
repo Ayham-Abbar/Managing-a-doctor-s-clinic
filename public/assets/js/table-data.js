@@ -70,14 +70,14 @@ $(function (e) {
     });
     // delete row datatable
 
-    // scroll vertical 
+    // scroll vertical
     $('#scroll-vertical').DataTable({
         scrollY: '265px',
         scrollCollapse: true,
         paging: false,
         scrollX: true,
     });
-    // scroll vertical 
+    // scroll vertical
 
     // hidden columns
     $('#hidden-columns').DataTable({
@@ -95,7 +95,7 @@ $(function (e) {
         "pageLength": 10,
     });
     // hidden columns
-    
+
     // add row datatable
     var t = $('#add-row').DataTable();
     var counter = 1;

@@ -1,0 +1,5 @@
+<style>
+    .status-pending select { background-color: #fff3cd !important; }   /* أصفر فاتح */
+    .status-confirmed select { background-color: #d1e7dd !important; } /* أخضر فاتح */
+    .status-cancelled select { background-color: #f8d7da !important; } /* أحمر فاتح */
+</style>

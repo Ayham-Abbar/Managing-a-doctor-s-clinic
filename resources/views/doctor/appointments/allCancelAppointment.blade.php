@@ -58,9 +58,15 @@
                                 <th scope="row">{{ $appointment->id }}</th>
                                 <td>{{ $appointment->user->name }}</td>
                                 <td>{{ $appointment->reason }}</td>
-                                <td>{{ $appointment->date }}</td>
+                                <td>{{ $appointment->timeSlot->date }}</td>
                                 <td>{{ $appointment->timeSlot->start_time }} - {{ $appointment->timeSlot->end_time }}</td>
-                                <td>{{ $appointment->status }}</td>
+                                  <td>
+                                    <select class="form-select status-select" data-id="{{ $appointment->id }}">
+                                        <option value="pending" {{ $appointment->status == 'pending' ? 'selected' : '' }}>Pending</option>
+                                        <option value="confirmed" {{ $appointment->status == 'confirmed' ? 'selected' : '' }}>Confirmed</option>
+                                        <option value="cancelled" {{ $appointment->status == 'cancelled' ? 'selected' : '' }}>Cancelled</option>
+                                    </select>
+                                </td>
                                 <td>
                                     <div class="gap-2 d-flex">
                                         {{-- <a href="{{ route('doctor.available-time.edit', $avaliableTime->id) }}" class="btn btn-primary btn-sm" onclick="return confirm('Are you sure you want to edit this item?');">Edit</a>
@@ -85,8 +91,81 @@
 @endsection
 
 @section('js')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="{{ asset('assets/js/table-data.js') }}"></script>
+    {{-- jQuery أولاً --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    {{-- مكتبات خارجية --}}
     <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    {{-- سكربتات المشروع --}}
+    <script src="{{ asset('assets/js/doctor.table.js') }}"></script>
+
+    {{-- سكربت الحالة --}}
+    <script>
+        $(function () {
+            // تحديث لون الصف
+            function updateRowColor(select) {
+                const row = select.closest('tr');
+                row.removeClass('status-pending status-confirmed status-cancelled');
+                row.addClass('status-' + select.val());
+            }
+
+            $('.status-select').each(function () {
+                updateRowColor($(this));
+            });
+
+            $('.status-select').on('focus', function () {
+                $(this).data('previous', $(this).val());
+            });
+
+            $('.status-select').on('change', function () {
+                const select = $(this);
+                const appointmentId = select.data('id');
+                const newStatus = select.val();
+
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "Change status to " + newStatus + "?",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, update it!',
+                    cancelButtonText: 'Cancel'
+                }).then(result => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: "{{ route('doctor.appointments.updateStatus') }}",
+                            method: 'POST',
+                            data: {
+                                _token: "{{ csrf_token() }}",
+                                appointment_id: appointmentId,
+                                status: newStatus
+                            },
+                            success(response) {
+                                if (response.success) {
+                                    updateRowColor(select);
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Status updated!',
+                                        text: 'Appointment updated successfully.',
+                                        timer: 1500,
+                                        showConfirmButton: false
+                                    });
+                                } else {
+                                    Swal.fire('Update failed', 'Could not update appointment status.', 'error');
+                                }
+                            },
+                            error() {
+                                Swal.fire('Server Error', 'Something went wrong while updating the status.', 'error');
+                            }
+                        });
+                    } else {
+                        select.val(select.data('previous'));
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
+

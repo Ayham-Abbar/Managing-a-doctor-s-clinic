@@ -55,4 +55,20 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function doctors()
+{
+    return $this->hasManyThrough(
+        Doctor::class,         // الموديل النهائي الذي نريد الوصول إليه (الطبيب)
+        Appointment::class,    // الموديل الوسيط (الموعد)
+        'user_id',             // المفتاح الأجنبي في appointments الذي يشير إلى users
+        'id',                  // المفتاح في doctors الذي يتطابق مع doctor_id في appointments
+        'id',                  // المفتاح المحلي في users
+        'doctor_id'            // المفتاح الأجنبي في appointments الذي يشير إلى doctors
+    );
+}
+public function appointments()
+{
+    return $this->hasMany(Appointment::class);
+
+}
 }

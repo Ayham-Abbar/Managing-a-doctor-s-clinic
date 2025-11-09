@@ -19,7 +19,7 @@
             <!-- include header.html"-->
             @include('partials.header')
 
-            
+
             <!-- include sidebar.html"-->
             @yield('sidebar')
 
@@ -78,4 +78,6 @@
 </body>
 
 
+
 </html>
+@stack('scripts')

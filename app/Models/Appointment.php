@@ -14,7 +14,7 @@ class Appointment extends Model
         'time_slot_id',
         'status',
     ];
-  
+
 
     public function user()
     {
@@ -29,6 +29,11 @@ class Appointment extends Model
     public function timeSlot()
     {
         return $this->belongsTo(TimeSolt::class);
+    }
+
+    public function treatmentPlan()
+    {
+        return $this->hasOne(TreatmentPlans::class);
     }
 
 
